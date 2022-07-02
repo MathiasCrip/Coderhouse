@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.login__body {
+    background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
+    animation: fondo-animado 10s ease infinite;
+    background-size: 800%;
+}
+
+#registro__body {
+
+    font-family: "Hind Vadodara", sans-serif;
+    background: linear-gradient(#8f663a, #98b6c3);
+}
+
+#contacto__body {
+    background-image: url(../Imagenes/imagenes_index/deportes2.jpg);
+    background-size: cover;
+    font-family: "Hind Vadodara", sans-serif;
+
+}
+
+#equipo__body {
+    background: linear-gradient(#9a8b7c, #63aac8)
+}
+
+
+.box-btn {
+    top: 4px;
+    height: 50px;
+    right: 23px;
+    background-color: #198754;
+    border: hidden;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+
+.box-btn .btn-nav::after {
+    position: absolute;
+    content: ' ';
+    width: 50px;
+    height: 5px;
+    top: 5px;
+    border-radius: 5px;
+    background-color: #00dd5f;
+    transition: all .5s;
+
+
+}
+
+.box-btn .btn-nav::before {
+    position: absolute;
+    content: ' ';
+    width: 50px;
+    height: 5px;
+    top: 25px;
+    border-radius: 5px;
+    background-color: #00dd5f;
+    transition: all .5s;
+}
+
+.box-btn input {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.box-btn input:checked~.btn-nav::after {
+    transform: rotate(45deg);
+    transform-origin: 11px 5px;
+    animation: effecto .5s linear;
+
+}
+
+.box-btn input:checked~.btn-nav::before {
+    transform: rotate(-45deg);
+    transform-origin: 13px 0;
+    animation: effecto .5s linear alternate-reverse;
+
+}
+
+.index__bg {
+    background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
+    animation: fondo-animado 10s ease infinite;
+    background-size: 800%;
+}
+
+
+@keyframes fondo-animado {
+    0% {
+        background-position: 0 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0 100%;
+    }
+
+}
+
+.box-section {
+    background: transparent;
+
+}
+
+.img__equipo:hover {
+
+    transform: scale(1.2);
+
+}
+
+.img__equipo {
+
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer__card:hover {
+
+    background: lightblue;
+}
+
+.registro__main {
+
+    max-width: 1200px;
+    margin: auto auto;
+}
+
+
+
+button[name="submit"],
+button[name="reset"] {
+    border: 1px solid rgb(32, 69, 33);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 8px;
+    font-size: 16px;
+    line-height: 46px;
+    font-family: "Hind Vadodara", sans-serif;
+    color: white;
+    background-color: #1197cc;
+    box-shadow: #094c66 4px 4px 0px;
+    transition: all 200ms;
+
+}
+
+button[name="submit"]:active,
+button[name="reset"]:active {
+
+    transform: translate(4px) translate(4px);
+    box-shadow: #094c66 0px 0px 0px;
+
+}
+
+button[name="submit"]:hover,
+button[name="reset"]:hover {
+    background-color: #1466c3;
+}
+
+
+
+/* CSS Contacto */
+
+.contacto__form {
+    margin: 0px auto 20px;
+    width: 530px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(10, 60, 70, 0.7);
+    box-shadow: 6px 3px 20px 0px blue;
+}
+
+.contacto__tabla__item .contacto__tabla__etiqueta {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+
+}
+
+#contacto__tabla__comentario {
+    height: 180px;
+}
+
+/* 
+input[name="contacto-nombre"],
+input[name="contacto-correo"],
+input[name="contacto-enviar"],
+input[name="contacto-limpiar_campos"],
+textarea[name="contacto-comentario"] {
+    background-color: bisque;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 7px;
+    font-size: 17px;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+}
+ */
+
+
+.contacto__label {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 10px 20px 0px;
+    display: inline-block;
+    font-family: monospace;
+}
+
+textarea {
+
+    resize: none;
+}
+
+
+a {
+    color: rgb(7, 0, 32);
+}
+
+/* input[name="contacto-enviar"]:hover,
+input[name="contacto-limpiar_campos"]:hover {
+    cursor: pointer;
+    background-color: #1b6286;
+    color: #dfcdc3;
+} */
+
+.contacto__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    flex-wrap: wrap;
+}
+
+.contacto__footer__img ul li {
+    display: inline-block;
+    list-style: none;
+
+}
+
+.contacto__footer__img ul li img {
+    width: 1.5em;
+    margin-left: 15px;
+    border-radius: 100%;
+}
+
+
+.contacto__footer p {
+    font-size: 20px;
+    color: #364f6b;
+}
+
+.contacto__h3__volver-home {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contacto__h3__volver-home a {
+    text-decoration: none;
+}
+
+/* CCS EQUIPO.HTML */
+
+
+.equipo__conteiner {
+    height: 450px;
+    display: grid;
+    grid-template-columns: 60vh 77vh;
+    grid-template-rows: 283px 176px;
+    gap: 5px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 30px;
+
+}
+
+.equipo__conteiner .equipo__grid-item {
+
+    align-items: center;
+
+}
+
+.equipo__conteiner .grid-item p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+    font-size: 15px;
+
+
+}
+
+.equipo__conteiner img {
+    border-radius: 100%;
+    width: 307px;
+}
+
+
+.equipo__footer .equipo__footer__img .equipo__lista-item {
+    display: inline-block;
+    list-style: none;
+
+}
+
+.equipo__footer .equipo__footer__img img {
+    width: 1.5em;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+
+
+
+h3 {
+    margin: 10px 0px 10px 20px;
+}

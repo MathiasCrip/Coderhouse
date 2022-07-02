@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon_login.jpg" type="image/x-icon">
+    <title>Acceder</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../Style_css/Style_sitio.css" rel="stylesheet" />
+    <style>
+        .box-btn {
+            top: 4px;
+            height: 50px;
+            right: 23px;
+        }
+
+
+        .box-btn .btn-nav::after {
+            position: absolute;
+            content: ' ';
+            width: 50px;
+            height: 5px;
+            top: 5px;
+            border-radius: 5px;
+            background-color: #00dd5f;
+            transition: all .5s;
+
+
+        }
+
+        .box-btn .btn-nav::before {
+            position: absolute;
+            content: ' ';
+            width: 50px;
+            height: 5px;
+            top: 25px;
+            border-radius: 5px;
+            background-color: #00dd5f;
+            transition: all .5s;
+        }
+
+        .box-btn input {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 9;
+        }
+
+        .box-btn input:checked~.btn-nav::after {
+            transform: rotate(45deg);
+            transform-origin: 11px 5px;
+            animation: effecto .5s linear;
+
+        }
+
+        .box-btn input:checked~.btn-nav::before {
+            transform: rotate(-45deg);
+            transform-origin: 13px 0;
+            animation: effecto .5s linear alternate-reverse;
+
+        }
+    </style>
+</head>
+
+<body class="login__body">
+
+    <nav class="bg-success navbar navbar-expand-lg" style="z-index: 9;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../Imagenes/imagenes_index/header__logo.png" style="width: 90px;"
+                    alt=""></a>
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <div class="box-btn position-relative">
+                    <input class="position-absolute opacity-0" type="checkbox" name="" id="">
+                    <div class="btn-nav"></div>
+                </div>
+
+            </button>
+            <div class="collapse navbar-collapse bg-success" style="z-index: 9;" id="navbarNav">
+                <ul class="navbar-nav ms-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Equipo.html">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="w-100">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                        class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                    <form>
+
+                        <div class="divider d-flex align-items-center my-4">
+                        </div>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="email" class="form-control form-control-lg"
+                                placeholder="Enter a valid email address" />
+                            <label class="form-label text-white" for="email">Correo electrónico</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <input type="password" id="clave" class="form-control form-control-lg"
+                                placeholder="Enter password" />
+                            <label class="form-label text-white" for="clave">Contraseña</label>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-0">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="recordarme" />
+                                <label class="form-check-label text-white" for="recordarme">
+                                    Recordarme
+                                </label>
+                            </div>
+                            <a href="#!" class="text-body">¿Olvidaste tu clave?</a>
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="button" class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                            <p class="small fw-bold mt-2 pt-1 mb-0 text-white">¿Todavía no estás registrado?<a
+                                    href="Registro.html" class="p-1">Registarme</a></p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-success w-100 h-100 p-2">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="footer__card card col">
+                    <div class="face face--fron mx-auto"><a href=""><i class="bi bi-facebook"></i></a>
+                    </div>
+                    <div class="face face--back mx-auto">Facebook</div>
+                </div>
+                <div class="footer__card card col ">
+                    <div class="face face--fron mx-auto"><a href=""><i class="bi bi-twitter"></i></a></div>
+                    <div class="face face--back mx-auto">Twitter</div>
+                </div>
+                <div class="footer__card card col">
+                    <div class="face face--fron mx-auto"><a href=""><i class="bi bi-linkedin"></i></a></div>
+                    <div class="face face--back mx-auto">Linkedin</div>
+                </div>
+                <div class="footer__card card col ">
+                    <div class="face face--fron mx-auto"><a href=""> <i class="bi bi-instagram"></i></a></div>
+                    <div class="face face--back mx-auto">Instagram</div>
+                </div>
+                <div class="footer__card card col">
+                    <div class="face face--fron mx-auto"><a href=""> <i class="bi bi-github"></i></a></div>
+                    <div class="face face--back mx-auto">GitHub</div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- 
+    <footer class="login__footer">
+        <div class="login__footer__img">
+            
+        </div>
+        <div class="footer__text">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci eius distinctio consequuntur
+                esse
+                illum tempora delectus quam perferendis, vitae amet. lorem10
+            </p>
+        </div>
+    </footer> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

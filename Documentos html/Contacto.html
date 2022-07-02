@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon_contacto.png" type="image/x-icon">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../Style_css/Style_sitio.css">
+    
+
+</head>
+
+<body id="contacto__body">
+
+    <header id="header">
+
+        <div class="header__logo">
+            <a href="index.html"><img src="../Imagenes/imagenes_index/header__logo.png" alt=""></a>
+
+            <h1>
+                Formulario de contacto
+            </h1>
+        </div>
+
+        <section class="header__nav">
+            <nav>
+                <div>
+                    <ul class="index__navegacion">
+                        <div>
+                            <li class="index__item__enlace">
+                                <a href="index.html">Home</a>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="index__item__enlace">
+                                <a href="Registro.html">Registrarme</a>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="index__item__enlace">
+                                <a href="Acceder.html">Login</a>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="index__item__enlace">
+                                <a href="Equipo.html">Nosotros</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <form method="get" name="contacto" action="url..." autocomplete="off" class="contacto__form">
+
+        <div>
+            <table>
+                <tr class="contacto__tabla__item">
+                    <th class="contacto__tabla__etiqueta" colspan="2">ENVIA TU COMENTARIO</th>
+                </tr>
+                <tr class="contacto__tabla__item">
+                    <th class="contacto__tabla__etiqueta">
+                        <label class="contacto__label" for="nombre">Nombre</label>
+                    </th>
+                    <td>
+                        <input name="contacto-nombre" type="text" id="nombre" size="35">
+                    </td>
+                </tr>
+                <tr class="contacto__tabla__item">
+                    <th class="contacto__tabla__etiqueta">
+                        <label class="contacto__label" for="correo">Correo</label>
+                    </th>
+                    <td>
+                        <input name="contacto-correo" type="email" id="correo" size="35">
+                    </td>
+                </tr>
+                <tr class="contacto__tabla__item">
+                    <th class="contacto__tabla__etiqueta">
+                        <label class="contacto__label" for="comentario">Comentario</label>
+                    </th>
+                    <td>
+                        <textarea name="contacto-comentario" id="contacto__tabla__comentario" cols="48"
+                            rows="5"></textarea>
+
+                    </td>
+                </tr>
+                <tr class="contacto__tabla__item">
+                    <th class="contacto__tabla__etiqueta" colspan="2">
+                        <input type="submit" name="contacto-enviar" id="enviar" value="Enviar Comentario">
+                        <input type="reset" value="Limpiar campos" name="contacto-limpiar_campos">
+                    </th>
+                </tr>
+            </table>
+
+        </div>
+
+
+        <h3 class="contacto__h3__volver-home"><a href="index.html">Volver al home</a></h3>
+
+        <footer class="contacto__footer">
+            <div class="contacto__footer__img">
+                <ul>
+                    <li>
+                        <a href=""><img src="../Imagenes/imagenes_footer/footer_icono_face.ico" alt="Facebook"
+                                title="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../Imagenes/imagenes_footer/footer_icono_tw.ico" alt="Tweeter"
+                                title="Tweeter"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../Imagenes/imagenes_footer/footer_icono_linkedin_1.ico" alt="Linkedin"
+                                title="Linkedin"></a>
+                    </li>
+                    <li>
+                        <a href=""> <img src="../Imagenes/imagenes_footer/footer_icono_ig.png" alt="Instagram"
+                                title="Instagram"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contacto__footer__text">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci eius distinctio consequuntur
+                    esse
+                    illum tempora delectus quam perferendis, vitae amet. lorem10
+                </p>
+            </div>
+        </footer>
+    </form>
+</body>
+
+</html>
