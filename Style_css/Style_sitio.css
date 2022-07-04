@@ -18,11 +18,15 @@
     background: linear-gradient(#8f663a, #98b6c3);
 }
 
-#contacto__body {
-    background-image: url(../Imagenes/imagenes_index/deportes2.jpg);
-    background-size: cover;
-    font-family: "Hind Vadodara", sans-serif;
+#contacto__container {
 
+    background: linear-gradient(#dfdfde, #98b6c3);
+
+}
+
+#contacto__container .form-box {
+    max-width: max-content;
+    min-width: 50vw;
 }
 
 #equipo__body {
@@ -144,8 +148,8 @@ a {
 
 
 
-button[name="submit"],
-button[name="reset"] {
+#contacto__container input[name="btn-style"] {
+    width: 12.5rem;
     border: 1px solid rgb(32, 69, 33);
     border-radius: 8px;
     cursor: pointer;
@@ -161,16 +165,16 @@ button[name="reset"] {
 
 }
 
-button[name="submit"]:active,
-button[name="reset"]:active {
+#contacto__container input[name="btn-style"]:active,
+#contacto__container input[name="btn-style"]:active {
 
     transform: translate(4px) translate(4px);
     box-shadow: #094c66 0px 0px 0px;
 
 }
 
-button[name="submit"]:hover,
-button[name="reset"]:hover {
+input[name="btn-style"]:hover,
+input[name="btn-style"]:hover {
     background-color: #1466c3;
 }
 
@@ -178,25 +182,6 @@ button[name="reset"]:hover {
 
 /* CSS Contacto */
 
-.contacto__form {
-    margin: 0px auto 20px;
-    width: 530px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: rgba(10, 60, 70, 0.7);
-    box-shadow: 6px 3px 20px 0px blue;
-}
-
-.contacto__tabla__item .contacto__tabla__etiqueta {
-    font-size: 20px;
-    color: #fff;
-    padding: 10px;
-
-}
-
-#contacto__tabla__comentario {
-    height: 180px;
-}
 
 /* 
 input[name="contacto-nombre"],
@@ -215,67 +200,12 @@ textarea[name="contacto-comentario"] {
 }
  */
 
-
-.contacto__label {
-    font-size: 18px;
-    color: #fff;
-    margin: 10px 10px 20px 0px;
-    display: inline-block;
-    font-family: monospace;
-}
-
-textarea {
-
-    resize: none;
-}
-
-
-a {
-    color: rgb(7, 0, 32);
-}
-
 /* input[name="contacto-enviar"]:hover,
 input[name="contacto-limpiar_campos"]:hover {
     cursor: pointer;
     background-color: #1b6286;
     color: #dfcdc3;
 } */
-
-.contacto__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    height: 160px;
-    flex-wrap: wrap;
-}
-
-.contacto__footer__img ul li {
-    display: inline-block;
-    list-style: none;
-
-}
-
-.contacto__footer__img ul li img {
-    width: 1.5em;
-    margin-left: 15px;
-    border-radius: 100%;
-}
-
-
-.contacto__footer p {
-    font-size: 20px;
-    color: #364f6b;
-}
-
-.contacto__h3__volver-home {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.contacto__h3__volver-home a {
-    text-decoration: none;
-}
 
 /* CCS EQUIPO.HTML */
 

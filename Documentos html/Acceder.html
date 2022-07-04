@@ -15,66 +15,14 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../Style_css/Style_sitio.css" rel="stylesheet" />
-    <style>
-        .box-btn {
-            top: 4px;
-            height: 50px;
-            right: 23px;
-        }
 
-
-        .box-btn .btn-nav::after {
-            position: absolute;
-            content: ' ';
-            width: 50px;
-            height: 5px;
-            top: 5px;
-            border-radius: 5px;
-            background-color: #00dd5f;
-            transition: all .5s;
-
-
-        }
-
-        .box-btn .btn-nav::before {
-            position: absolute;
-            content: ' ';
-            width: 50px;
-            height: 5px;
-            top: 25px;
-            border-radius: 5px;
-            background-color: #00dd5f;
-            transition: all .5s;
-        }
-
-        .box-btn input {
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            z-index: 9;
-        }
-
-        .box-btn input:checked~.btn-nav::after {
-            transform: rotate(45deg);
-            transform-origin: 11px 5px;
-            animation: effecto .5s linear;
-
-        }
-
-        .box-btn input:checked~.btn-nav::before {
-            transform: rotate(-45deg);
-            transform-origin: 13px 0;
-            animation: effecto .5s linear alternate-reverse;
-
-        }
-    </style>
 </head>
 
 <body class="login__body">
 
     <nav class="bg-success navbar navbar-expand-lg" style="z-index: 9;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../Imagenes/imagenes_index/header__logo.png" style="width: 90px;"
+            <a class="navbar-brand" href="#"><img src="../Imagenes/imagenes_index/header__logo.png" style="width: 50px;"
                     alt=""></a>
             <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,10 +36,10 @@
             <div class="collapse navbar-collapse bg-success" style="z-index: 9;" id="navbarNav">
                 <ul class="navbar-nav ms-5">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                        <a class="nav-link" href="./Contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Registro.html">Registro</a>
@@ -118,15 +66,15 @@
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <input type="email" id="email" class="form-control form-control-lg"
-                                placeholder="Enter a valid email address" />
+                                placeholder="Ingresar una dirección de Email válida" />
                             <label class="form-label text-white" for="email">Correo electrónico</label>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-3">
                             <input type="password" id="clave" class="form-control form-control-lg"
-                                placeholder="Enter password" />
-                            <label class="form-label text-white" for="clave">Contraseña</label>
+                                placeholder="Contraseña" />
+                            <label class="form-label text-white" for="clave">Clave</label>
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center">

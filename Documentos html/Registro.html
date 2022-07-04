@@ -22,7 +22,7 @@
 
     <nav class="bg-success navbar navbar-expand-lg position-sticky top-0 " style="z-index: 9;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../Imagenes/imagenes_index/header__logo.png" style="width: 70px;"
+            <a class="navbar-brand" href="#"><img src="../Imagenes/imagenes_index/header__logo.png" style="width: 50px;"
                     alt=""></a>
             <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,15 +54,25 @@
 
 
     <main class="registro__main">
+
         <form>
-            <div class="form-row row">
+            <div class="form-row row ">
                 <div class="form-group col-md-6 col-sm-6">
-                    <label for="input-nombre" class="p-2">Nombre</label>
+                    <label for="input-nombre" class="p-2">Nombre(s)</label>
                     <input type="text" class="form-control" id="imput-nombre" placeholder="Nombre">
                 </div>
                 <div class="form-group col-md-6 col-sm-6">
-                    <label for="apellido" class="p-2">Apellido</label>
+                    <label for="apellido" class="p-2">Apellido(s)</label>
                     <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="tel" class="p-2">Teléfono</label>
+                    <input type="tel" class="form-control" id="tel">
+                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="fecha" class="p-2">Fecha de nacimiento</label>
+                    <input type="date" class="form-control w-100" id="fecha">
                 </div>
             </div>
             <div class="form-group">
@@ -106,6 +116,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary p-2">Guardar</button>
                 <button type="reset" class="btn btn-primary p-2">Limpiar campos</button>
+            </div>
         </form>
     </main>
 
