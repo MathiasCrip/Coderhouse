@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../Style_css/Style_sitio.css" rel="stylesheet" />
+    <link href="../Style_css/Style_ed.css" rel="stylesheet" />
 
 </head>
 
@@ -56,44 +56,52 @@
     <main class="registro__main">
 
         <form>
-            <div class="form-row row ">
-                <div class="form-group col-md-6 col-sm-6">
+            <div class="form-row row ps-4 pe-4">
+                <div class="form-group p-2 registro-input-nombre col-xl-4 col-md-4 col-sm-6 align-items-center">
                     <label for="input-nombre" class="p-2">Nombre(s)</label>
                     <input type="text" class="form-control" id="imput-nombre" placeholder="Nombre">
                 </div>
-                <div class="form-group col-md-6 col-sm-6">
+                <div class="form-group p-2 registro-input-apellido col-xl-4 col-md-4 col-sm-6 align-items-center">
                     <label for="apellido" class="p-2">Apellido(s)</label>
                     <input type="text" class="form-control" id="apellido" placeholder="Apellido">
                 </div>
 
-                <div class="form-group col-md-6 col-sm-6">
-                    <label for="tel" class="p-2">Teléfono</label>
-                    <input type="tel" class="form-control" id="tel">
-                </div>
-                <div class="form-group col-md-6 col-sm-6">
-                    <label for="fecha" class="p-2">Fecha de nacimiento</label>
-                    <input type="date" class="form-control w-100" id="fecha">
+                <div class="form-row row">
+                    <div class="form-group registro-input-fnac p-2 col-xl-2 col-md-3 col-sm-3">
+                        <label for="fecha" class="p-2 mx-auto">Fecha nacimiento</label>
+                        <input type="date" class=" form-control " id="fecha">
+                    </div>
+                    <div class="form-group registro-input-codPost p-2 col-xl-2 col-md-2 col-sm-3 ">
+                        <label for="input-codPos" class="p-2">Cód. Postal</label>
+                        <input type="text" class=" form-control" id="input-codPos" placeholder="ej. 1874">
+                    </div>
+                    <div class="form-group p-2 registro-input-tel col-xl-3 col-md-4 col-sm-6 align-items-center">
+                        <label for="tel" class="p-2">Teléfono</label>
+                        <input type="tel" class=" form-control" id="tel" placeholder="11-xxxxx-xxxxx">
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class=" form-row row">
-                    <div class="form-group col-md-6 col-sm-6">
-                        <label for="input-email" class="p-2">Email</label>
-                        <input type="email" class="form-control" id="input-email" placeholder="Email">
+            <div class="form-group ps-4 pe-4">
+                <div class=" form-row row ">
+                    <div class="form-group registro-input-email p-2 col-md-4 col-xl-4 col-sm-5 align-items-center">
+                        <label for="input-email" class="p-2">Correo electrónico</label>
+                        <input type="email" class="registro-input form-control" id="input-email" placeholder="Email">
                     </div>
-                    <div class="form-group col-md-6 col-sm-6">
+                    <div class="form-group registro-input-clave p-2 col-md-4 col-xl-4 col-sm-5 align-items-center">
                         <label for="input-clave" class="p-2">Clave</label>
-                        <input type="password" class="form-control" id="input-clave" placeholder="Contraseña">
+                        <input type="password" class="registro-input form-control" id="input-clave"
+                            placeholder="Contraseña">
                     </div>
                 </div>
-                <div class="form-group form-row row">
-                    <div class="from-group col-md-6 col-sm-6">
+                <div class="form-group form-row row ">
+                    <div class="from-group registro-input-dire p-2 col-xl-5 col-md-4 col-sm-3">
                         <label for="input-direccion" class="p-2">Dirección</label>
-                        <input type="text" class="form-control" id="input-direccion" placeholder="1234 Boulevard....">
+                        <input type="text" class="registro-input form-control" id="input-direccion"
+                            placeholder="1234 Boulevard....">
                     </div>
-                    <div class="form-group col-md-4 col-sm-6">
+                    <div class="form-group registro-input-loc p-2 col-md-4 col-sm-6">
                         <label for="input-localidad" class="p-2">Localidad</label>
-                        <select id="input-localidad" class="form-control">
+                        <select id="input-localidad" class="registro-input form-control">
                             <option selected>Seleccionar </option>
                             <option>Lanús</option>
                             <option>Merlo</option>
@@ -101,12 +109,8 @@
                             <option>....</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-2 col-sm-6">
-                        <label for="input-codPos" class="pt-3">Código-Postal</label>
-                        <input type="text" class="form-control" id="input-codPos">
-                    </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group p-2">
                     <div class="form-check ">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
                         <label class="form-check-label " for="gridCheck">
@@ -120,7 +124,7 @@
         </form>
     </main>
 
-    <footer class="bg-success mt-4 p-2">
+    <footer class="d-flex align-items-center bg-success registro-footer mt-4 p-2">
         <div class="container">
             <div class="row align-items-start">
                 <div class="footer__card card col">
@@ -145,7 +149,11 @@
                     <div class="face face--back mx-auto">GitHub</div>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col text-center p-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis ut repellendus magni eveniet
+                </div>
+            </div>
 
     </footer>
 

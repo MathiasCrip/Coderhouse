@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes fondo-animado {
+  0% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes fondo-animado {
+  0% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+#login__body {
+  background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
+  -webkit-animation: fondo-animado 10s ease infinite;
+  animation: fondo-animado 10s ease infinite;
+  background-size: 800%;
+}
+
+#registro__body {
+  font-family: "Hind Vadodara", sans-serif;
+  background: linear-gradient(#8f663a, #98b6c3);
+}
+
+#registro__body .registro__main {
+  max-width: 1200px;
+  margin: auto auto;
+}
+
+#registro__body .registro__main .registro-input-fnac,
+#registro__body .registro__main .registro-input-codPost {
+  max-width: 33vw;
+}
+
+#registro__body .registro__main .registro-input-nombre,
+#registro__body .registro__main .registro-input-apellido {
+  max-width: 60vw;
+}
+
+#registro__body .registro__main .registro-input-tel,
+#registro__body .registro__main .registro-input-email,
+#registro__body .registro__main .registro-input-clave,
+#registro__body .registro__main .registro-input-dire,
+#registro__body .registro__main .registro-input-loc {
+  max-width: 66vw;
+}
+
+#contacto__container {
+  background: linear-gradient(#dfdfde, #98b6c3);
+}
+
+#contacto__container input[name=btn-style] {
+  width: 12.5rem;
+  border: 1px solid rgb(32, 69, 33);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  padding: 0px 8px;
+  font-size: 16px;
+  line-height: 46px;
+  font-family: "Hind Vadodara", sans-serif;
+  color: white;
+  background-color: #1197cc;
+  box-shadow: #094c66 4px 4px 0px;
+  transition: all 200ms;
+}
+
+#contacto__container input[name=btn-style]:active {
+  transform: translate(4px) translate(4px);
+  box-shadow: #094c66 0px 0px 0px;
+}
+
+#contacto__container input[name=btn-style]:hover,
+#contacto__container input[name=btn-style]:hover {
+  background-color: #1466c3;
+}
+
+#contacto__container .form-box {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  min-width: 50vw;
+}
+
+#equipo__body {
+  background: linear-gradient(#9a8b7c, #63aac8);
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar .navbar-style {
+  border: none;
+}
+
+.navbar .box-btn {
+  top: 4px;
+  height: 50px;
+  right: 23px;
+  background-color: #198754;
+  border: hidden;
+}
+
+.navbar .box-btn .btn-nav::after {
+  position: absolute;
+  content: " ";
+  width: 50px;
+  height: 5px;
+  top: 5px;
+  border-radius: 5px;
+  background-color: #00dd5f;
+  transition: all 0.5s;
+}
+
+.navbar .box-btn .btn-nav::before {
+  position: absolute;
+  content: " ";
+  width: 50px;
+  height: 5px;
+  top: 25px;
+  border-radius: 5px;
+  background-color: #00dd5f;
+  transition: all 0.5s;
+}
+
+.navbar .box-btn input {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.navbar .box-btn .box-btn input:checked~.btn-nav::after {
+  transform: rotate(45deg);
+  transform-origin: 11px 5px;
+  -webkit-animation: effecto 0.5s linear;
+  animation: effecto 0.5s linear;
+}
+
+.navbar .box-btn .box-btn input:checked~.btn-nav::before {
+  transform: rotate(-45deg);
+  transform-origin: 13px 0;
+  animation: effecto 0.5s linear alternate-reverse;
+}
+
+.index__bg {
+  background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
+  -webkit-animation: fondo-animado 10s ease infinite;
+  animation: fondo-animado 10s ease infinite;
+  background-size: 800%;
+}
+
+.index__bg .box-section {
+  background: transparent;
+}
+
+.index__bg .box-section .img__equipo {
+  transition: 0.5s;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.index__bg .box-section .img__equipo:hover {
+  transform: scale(1.2);
+
+}
+
+.registro-footer {
+  height: 13.8rem;
+}
+
+.footer__card:hover {
+  background: lightblue;
+}
+
+/*# sourceMappingURL=Style_ed.css.map */
