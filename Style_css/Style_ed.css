@@ -153,14 +153,14 @@ a {
   z-index: 9;
 }
 
-.navbar .navbar-btn .box-btn input:checked~.btn-nav::after {
+.navbar .navbar-style .box-btn input:checked~.btn-nav::after {
   transform: rotate(45deg);
   transform-origin: 11px 5px;
   -webkit-animation: effecto 0.5s linear;
   animation: effecto 0.5s linear;
 }
 
-.navbar .navbar-btn .box-btn input:checked~.btn-nav::before {
+.navbar .navbar-style .box-btn input:checked~.btn-nav::before {
   transform: rotate(-45deg);
   transform-origin: 13px 0;
   animation: effecto 0.5s linear alternate-reverse;
