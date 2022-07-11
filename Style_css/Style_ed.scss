@@ -77,12 +77,14 @@ $value in $bg-color {
             }
 
             .login--btn:hover {
-                background-color: #07b251;
+                border: 1px solid #0055dd;
             }
 
             .login--btn:active {
                 transform: translate(4px) translate(4px);
                 box-shadow: #096639 0px 0px 0px;
+                background-color: #07b251;
+
             }
         }
     }

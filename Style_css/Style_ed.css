@@ -51,11 +51,12 @@
   box-shadow: #096639 4px 4px 0px;
 }
 #login__body section .login-box-btn .login--btn:hover {
-  background-color: #07b251;
+  border: 1px solid #0055dd;
 }
 #login__body section .login-box-btn .login--btn:active {
   transform: translate(4px) translate(4px);
   box-shadow: #096639 0px 0px 0px;
+  background-color: #07b251;
 }
 
 #registro__body {
