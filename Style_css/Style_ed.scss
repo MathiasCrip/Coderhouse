@@ -5,6 +5,50 @@
 
 }
 
+$coloresClaros: (
+    #d3d3d3,
+    #a49a5e,
+    #dadada,
+    #a56ca2
+);
+
+$coloresOscuros: (
+    #2b2525,
+    #b62323,
+    #7c2424,
+    #1f1f9f
+);
+
+$ColorMenuHamburguesa: #00dd5f;
+
+
+$font: sans-serif;
+
+$bg-color: (
+    verde: #167b16,
+    azul: #353595,
+    marron: #6e2222,
+    amarillo: #abab11
+);
+
+
+
+@each $key,
+$value in $bg-color {
+    .bg-color-#{$key} {
+        background-color: $value;
+    }
+}
+
+
+@mixin menuHamburger {
+    position: absolute;
+    content: ' ';
+    width: 50px;
+    height: 5px;
+}
+
+
 @keyframes fondo-animado {
     0% {
         background-position: 0 100%;
@@ -21,14 +65,32 @@
 }
 
 #login__body {
-    background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
-    animation: fondo-animado 10s ease infinite;
-    background-size: 800%;
+    background-color: #d3d3d3;
+
+    section {
+        .login-box-btn {
+            .login--btn {
+                @extend .button;
+                background-color: #0055dd;
+                box-shadow: #096639 4px 4px 0px;
+
+            }
+
+            .login--btn:hover {
+                background-color: #07b251;
+            }
+
+            .login--btn:active {
+                transform: translate(4px) translate(4px);
+                box-shadow: #096639 0px 0px 0px;
+            }
+        }
+    }
 }
 
 #registro__body {
 
-    font-family: "Hind Vadodara", sans-serif;
+    font-family: $font;
     background: linear-gradient(#8f663a, #98b6c3);
 
     .registro__main {
@@ -53,47 +115,85 @@
         .registro-input-loc {
             max-width: 66vw;
         }
+
+        form {
+
+            .registro--btn-save,
+            .registro--btn-clear {
+                @extend .button;
+                background-color: #2a45af;
+                box-shadow: #093c66 4px 4px 0px;
+            }
+
+            .registro--btn-save:active,
+            .registro--btn-clear:active {
+                transform: translate(4px) translate(4px);
+                box-shadow: #093c66 0px 0px 0px;
+            }
+
+            .registro--btn-save:hover {
+                background-color: #00dd5f;
+
+            }
+
+            .registro--btn-clear:hover {
+                background-color: #bb5418;
+
+            }
+        }
+
     }
 
+
 }
+
+.button {
+    width: 12.5rem;
+    border: 1px solid #204521;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 8px;
+    font-size: 16px;
+    line-height: 46px;
+    font-family: $font;
+    color: white;
+    font-weight: 600;
+    transition: all 200ms;
+}
+
 
 #contacto__container {
 
     background: linear-gradient(#dfdfde, #98b6c3);
 
-    input[name="btn-style"] {
-        width: 12.5rem;
-        border: 1px solid rgb(32, 69, 33);
-        border-radius: 8px;
-        cursor: pointer;
-        text-align: center;
-        padding: 0px 8px;
-        font-size: 16px;
-        line-height: 46px;
-        font-family: "Hind Vadodara", sans-serif;
-        color: white;
+    input[name="btn-submit"],
+    input[name="btn-reset"] {
+        @extend .button;
         background-color: #1197cc;
         box-shadow: #094c66 4px 4px 0px;
-        transition: all 200ms;
 
     }
 
-    input[name="btn-style"]:active {
-
+    input[name="btn-submit"]:active,
+    input[name="btn-reset"]:active {
         transform: translate(4px) translate(4px);
         box-shadow: #094c66 0px 0px 0px;
+    }
+
+    input[name="btn-submit"]:hover {
+        background-color: #3fa134;
+    }
+
+    input[name="btn-reset"]:hover {
+        background-color: #111ac7;
 
     }
 
-    input[name="btn-style"]:hover,
-    input[name="btn-style"]:hover {
-        background-color: #1466c3;
+    .form-box {
+        max-width: max-content;
+        min-width: 50vw;
     }
-}
-
-#contacto__container .form-box {
-    max-width: max-content;
-    min-width: 50vw;
 }
 
 #equipo__body {
@@ -103,6 +203,7 @@
 a {
     text-decoration: none;
 }
+
 
 .navbar {
 
@@ -118,25 +219,19 @@ a {
         border: hidden;
 
         .btn-nav::after {
-            position: absolute;
-            content: ' ';
-            width: 50px;
-            height: 5px;
+            @include menuHamburger();
             top: 5px;
             border-radius: 5px;
-            background-color: #00dd5f;
+            background-color: $ColorMenuHamburguesa;
             transition: all .5s;
 
         }
 
         .btn-nav::before {
-            position: absolute;
-            content: ' ';
-            width: 50px;
-            height: 5px;
+            @include menuHamburger();
             top: 25px;
             border-radius: 5px;
-            background-color: #00dd5f;
+            background-color: $ColorMenuHamburguesa;
             transition: all .5s;
         }
 
@@ -147,24 +242,24 @@ a {
             z-index: 9;
         }
 
-        .box-btn input:checked~.btn-nav::after {
+        input:checked~.btn-nav::after {
             transform: rotate(45deg);
             transform-origin: 11px 5px;
             animation: effecto .5s linear;
-
+            background-color: #02f3b7;
         }
 
-        .box-btn input:checked~.btn-nav::before {
+        input:checked~.btn-nav::before {
             transform: rotate(-45deg);
             transform-origin: 13px 0;
             animation: effecto .5s linear alternate-reverse;
-
+            background-color: #02f3b7;
         }
     }
 }
 
 .index__bg {
-    background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
+    background: linear-gradient(45deg, $coloresClaros);
     animation: fondo-animado 10s ease infinite;
     background-size: 800%;
 
