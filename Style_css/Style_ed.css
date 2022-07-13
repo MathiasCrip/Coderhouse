@@ -222,6 +222,13 @@ footer {
   background-color: #202020;
   color: #f5f3ee;
 }
+footer .card:hover {
+  transform: translateX(4px);
+}
+footer .card {
+  cursor: pointer;
+  transition: all 0.4s;
+}
 
 .registro-footer {
   height: 13.8rem;

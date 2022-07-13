@@ -286,8 +286,18 @@ footer {
     background-color: #202020;
     color: #f5f3ee;
 
+    .card:hover {
+        transform: translateX(4px);
+    }
+
+    .card {
+        cursor: pointer;
+        transition: all .4s;
+
+    }
 }
 
 .registro-footer {
     height: 13.8rem;
+
 }
