@@ -151,6 +151,10 @@ a {
   text-decoration: none;
 }
 
+.navbar {
+  height: 70px;
+  z-index: 2;
+}
 .navbar .navbar-style {
   border: none;
 }
@@ -201,6 +205,11 @@ a {
   background-color: #02f3b7;
 }
 
+.index-img {
+  max-height: 75vh;
+  min-height: 40vh;
+}
+
 .index__bg {
   background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
   -webkit-animation: fondo-animado 10s ease infinite;
@@ -232,6 +241,9 @@ footer .card {
   transition: all 0.4s;
   min-width: 170px;
   max-width: 180px;
+}
+footer .col-company {
+  min-width: 300px;
 }
 
 .registro-footer {

@@ -209,6 +209,8 @@ a {
 
 
 .navbar {
+    height: 70px;
+    z-index: 2;
 
     .navbar-style {
         border: none;
@@ -261,6 +263,11 @@ a {
     }
 }
 
+.index-img {
+    max-height: 75vh;
+    min-height: 40vh;
+}
+
 .index__bg {
     background: linear-gradient(45deg, $coloresClaros);
     animation: fondo-animado 10s ease infinite;
@@ -297,6 +304,10 @@ footer {
         transition: all .4s;
         min-width: 170px;
         max-width: 180px;
+    }
+
+    .col-company {
+        min-width: 300px;
     }
 }
 
