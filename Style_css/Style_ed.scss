@@ -102,7 +102,8 @@ $value in $bg-color {
 
         .registro-input-fnac,
         .registro-input-codPost {
-            max-width: 33vw;
+            min-width: 160px;
+            max-width: 170px;
         }
 
         .registro-input-nombre,
@@ -279,7 +280,6 @@ a {
         }
 
     }
-
 }
 
 footer {
@@ -291,9 +291,12 @@ footer {
     }
 
     .card {
+        background: linear-gradient(90deg, rgba(199, 199, 209, 1) 0%, rgba(235, 244, 176, 1) 0%,
+                rgba(120, 116, 2, 1) 100%, rgba(0, 255, 46, 1) 100%, rgba(124, 115, 7, 1) 100%);
         cursor: pointer;
         transition: all .4s;
         min-width: 170px;
+        max-width: 180px;
     }
 }
 

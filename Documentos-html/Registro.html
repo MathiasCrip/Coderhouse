@@ -54,74 +54,89 @@
     </nav>
 
 
-    <main class="registro__main">
+    <main class="registro__main shadow-lg p-3 mb-5 rounded">
 
-        <form>
-            <div class="form-row row ps-4 pe-4">
-                <div class="form-group p-2 registro-input-nombre col-xl-4 col-md-4 col-sm-6 align-items-center">
-                    <label for="input-nombre" class="p-2">Nombre(s)</label>
-                    <input type="text" class="form-control" id="imput-nombre" placeholder="Nombre">
-                </div>
-                <div class="form-group p-2 registro-input-apellido col-xl-4 col-md-4 col-sm-6 align-items-center">
-                    <label for="apellido" class="p-2">Apellido(s)</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-                </div>
+        <h2 class="text-start ms-5 pt-4 fw-bold text-dark fs-1">Formulario de registro</h2>
 
-                <div class="form-row row">
-                    <div class="form-group registro-input-fnac p-2 col-xl-2 col-md-3 col-sm-3">
-                        <label for="fecha" class="p-2 mx-auto">Fecha nacimiento</label>
-                        <input type="date" class=" form-control " id="fecha">
-                    </div>
-                    <div class="form-group registro-input-codPost p-2 col-xl-2 col-md-2 col-sm-3 ">
-                        <label for="input-codPos" class="p-2">Cód. Postal</label>
-                        <input type="text" class=" form-control" id="input-codPos" placeholder="ej. 1874">
-                    </div>
-                    <div class="form-group p-2 registro-input-tel col-xl-3 col-md-4 col-sm-6 align-items-center">
-                        <label for="tel" class="p-2">Teléfono</label>
-                        <input type="tel" class=" form-control" id="tel" placeholder="11-xxxxx-xxxxx">
+        <form class="my-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-row row ps-4 pe-4">
+                            <div
+                                class="form-group p-2 registro-input-nombre col-xl-4 col-md-4 col-sm-6 align-items-center">
+                                <label for="input-nombre" class="p-2">Nombre(s)</label>
+                                <input type="text" class="form-control" id="imput-nombre" placeholder="Nombre">
+                            </div>
+                            <div
+                                class="form-group p-2 registro-input-apellido col-xl-4 col-md-4 col-sm-6 align-items-center">
+                                <label for="apellido" class="p-2">Apellido(s)</label>
+                                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                            </div>
+
+                            <div class="form-row row">
+                                <div class="form-group registro-input-fnac p-2 col-xl-2 col-md-3 col-sm-3">
+                                    <label for="fecha" class="py-2 px-2 mx-auto">Fecha nacimiento</label>
+                                    <input type="date" class=" form-control " id="fecha">
+                                </div>
+                                <div class="form-group registro-input-codPost p-2 col-xl-2 col-md-2 col-sm-3 ">
+                                    <label for="input-codPos" class="py-2 px-2">Cód. Postal</label>
+                                    <input type="text" class=" form-control" id="input-codPos" placeholder="ej. 1874">
+                                </div>
+                                <div
+                                    class="form-group p-2 registro-input-tel col-xl-3 col-md-4 col-sm-6 align-items-center">
+                                    <label for="tel" class="p-2">Teléfono</label>
+                                    <input type="tel" class=" form-control" id="tel" placeholder="11-xxxxx-xxxxx">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ps-4 pe-4">
+                            <div class=" form-row row ">
+                                <div
+                                    class="form-group registro-input-email p-2 col-md-4 col-xl-4 col-sm-5 align-items-center">
+                                    <label for="input-email" class="p-2">Correo electrónico</label>
+                                    <input type="email" class="registro-input form-control" id="input-email"
+                                        placeholder="Email">
+                                </div>
+                                <div
+                                    class="form-group registro-input-clave p-2 col-md-4 col-xl-4 col-sm-5 align-items-center">
+                                    <label for="input-clave" class="p-2">Clave</label>
+                                    <input type="password" class="registro-input form-control" id="input-clave"
+                                        placeholder="Contraseña">
+                                </div>
+                            </div>
+                            <div class="form-group form-row row ">
+                                <div class="from-group registro-input-dire p-2 col-xl-5 col-md-4 col-sm-3">
+                                    <label for="input-direccion" class="p-2">Dirección</label>
+                                    <input type="text" class="registro-input form-control" id="input-direccion"
+                                        placeholder="1234 Boulevard....">
+                                </div>
+                                <div class="form-group registro-input-loc p-2 col-md-4 col-sm-6">
+                                    <label for="input-localidad" class="p-2">Localidad</label>
+                                    <select id="input-localidad" class="registro-input form-control">
+                                        <option selected>Seleccionar </option>
+                                        <option>Lanús</option>
+                                        <option>Merlo</option>
+                                        <option>Sarandí</option>
+                                        <option>....</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group p-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label " for="gridCheck">
+                                        Recibir notificaciones
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="registro--btn-save m-2">Guardar</button>
+                            <button type="reset" class="registro--btn-clear">Limpiar campos</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="form-group ps-4 pe-4">
-                <div class=" form-row row ">
-                    <div class="form-group registro-input-email p-2 col-md-4 col-xl-4 col-sm-5 align-items-center">
-                        <label for="input-email" class="p-2">Correo electrónico</label>
-                        <input type="email" class="registro-input form-control" id="input-email" placeholder="Email">
-                    </div>
-                    <div class="form-group registro-input-clave p-2 col-md-4 col-xl-4 col-sm-5 align-items-center">
-                        <label for="input-clave" class="p-2">Clave</label>
-                        <input type="password" class="registro-input form-control" id="input-clave"
-                            placeholder="Contraseña">
-                    </div>
-                </div>
-                <div class="form-group form-row row ">
-                    <div class="from-group registro-input-dire p-2 col-xl-5 col-md-4 col-sm-3">
-                        <label for="input-direccion" class="p-2">Dirección</label>
-                        <input type="text" class="registro-input form-control" id="input-direccion"
-                            placeholder="1234 Boulevard....">
-                    </div>
-                    <div class="form-group registro-input-loc p-2 col-md-4 col-sm-6">
-                        <label for="input-localidad" class="p-2">Localidad</label>
-                        <select id="input-localidad" class="registro-input form-control">
-                            <option selected>Seleccionar </option>
-                            <option>Lanús</option>
-                            <option>Merlo</option>
-                            <option>Sarandí</option>
-                            <option>....</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group p-2">
-                    <div class="form-check ">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label " for="gridCheck">
-                            Recibir notificaciones
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="registro--btn-save m-2">Guardar</button>
-                <button type="reset" class="registro--btn-clear">Limpiar campos</button>
-            </div>
+
         </form>
     </main>
 
@@ -130,8 +145,8 @@
             <div class="footer-container row justify-content-center text-center py-4">
                 <div class="row">
                     <div class="col">
-                        <h3 class="mb-2 fw-bold ">Información sobre la compañia</h3>
-                        <div class="bg-transparent card text-start mx-auto ">
+                        <h3 class="text-start mb-2 fw-bold">Información sobre la compañia</h3>
+                        <div class="bg-transparent text-start mx-auto ">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis ut repellendus magni
                                 eveniet
                                 voluptate consequatur molestias consectetur impedit ipsum? Lorem ipsum dolor sit amet
@@ -144,32 +159,32 @@
                             <h3 class="fw-bold mb-3">Redes sociales</h3>
                         </div>
                         <div class="col">
-                            <div class="bg-warning card flex-row p-2 w-75 justify-content-center mx-auto">
+                            <div class="card flex-row p-2 w-75 justify-content-center mx-auto">
                                 <div class="face face--fron"><a href=""><i class="bi bi-facebook me-2"></i></a>
                                 </div>
-                                <div class="face face--back text-dark">Facebook</div>
+                                <div class="face face--back text-dark text-start">Facebook</div>
                             </div>
-                            <div class="bg-warning card flex-row  p-2 w-75 justify-content-center mx-auto">
+                            <div class="card flex-row  p-2 w-75 justify-content-center mx-auto">
                                 <div class="face face--fron"><a href=""><i class="bi bi-twitter me-2"></i></a></div>
                                 <div class="face face--back text-dark">Twitter</div>
                             </div>
-                            <div class="bg-warning card flex-row p-2 w-75 justify-content-center mx-auto">
+                            <div class="card flex-row p-2 w-75 justify-content-center mx-auto">
                                 <div class="face face--fron"><a href=""><i class="bi bi-linkedin me-2"></i></a></div>
                                 <div class="face face--back text-dark">Linkedin</div>
                             </div>
-                            <div class="bg-warning card flex-row p-2 w-75 justify-content-center mx-auto">
+                            <div class="card flex-row p-2 w-75 justify-content-center mx-auto">
                                 <div class="face face--fron"><a href=""> <i class="bi bi-instagram me-2"></i></a></div>
                                 <div class="face face--back text-dark">Instagram</div>
                             </div>
-                            <div class="bg-warning card flex-row p-2 w-75 justify-content-center mx-auto">
+                            <div class="card flex-row p-2 w-75 justify-content-center mx-auto">
                                 <div class="face face--fron"><a href=""> <i class="bi bi-github me-2"></i></a></div>
                                 <div class="face face--back text-dark">GitHub</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col" style="min-width: 250px;">
-                        <h3 class="fw-bold mb-3">Información de contacto</h3>
-                        <div class="bg-transparent card text-start mx-auto ">
+                    <div class="col">
+                        <h3 class="text-start fw-bold mb-3">Información de contacto</h3>
+                        <div class="bg-transparent text-start mx-auto">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis ut repellendus magni
                                 eveniet
                                 voluptate consequatur molestias consectetur impedit ipsum? Lorem ipsum dolor sit amet
