@@ -16,6 +16,11 @@
     <title>Posiciones</title>
 
     <style>
+        .container {
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
         img {
             width: 24px;
         }
@@ -25,6 +30,23 @@
             letter-spacing: -1px;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 1.8rem;
+        }
+
+        .container .tabla-liga {
+            height: 250px;
+            overflow-y: scroll;
+        }
+
+        .container .posiciones__seccion-tablaGolYpro {
+            position: relative;
+            margin-top: 2.5rem;
+
+        }
+
+        .tabla-promedios {
+            height: 500px;
+            overflow-y: scroll;
+
         }
     </style>
 </head>
@@ -49,6 +71,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ms-5">
                     <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="../Documentos-html/Registro.html" class="nav-link">Registrarme</a>
                     </li>
                     <li class="nav-item">
@@ -66,18 +91,18 @@
     </nav>
 
 
-    <div class="container">
+    <div class="container mb-4">
         <div class="row gx-5 gy-3">
-            <div class="col-xl-7">
+            <div class="col-xl-12">
                 <div class="row">
                     <div class="m-2 p-2">
                         <h2 class="d-flex flex-column posiciones-titular fw">Tabla de posiciones
                             <span class="fst-italic text-success">Liga profesional de Fútbol</span>
                         </h2>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-success table-striped-columns table-hover">
-                            <thead>
+                    <div class="table-responsive tabla-liga shadow-sm mb-5 bg-light rounded">
+                        <table class="table table-success table-striped-columns table-hover text-center">
+                            <thead class="position-sticky top-0 table-secondary shadow p-3 mb-5 bg-body rounded">
                                 <tr>
                                     <th scope="col">#</th>
                                     <th></th>
@@ -463,389 +488,472 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5">
-                <div class="m-2 p-2">
-                    <h2 class="d-flex flex-column posiciones-titular fw">Tabla de goleadores
-                        <span class="fst-italic text-success">Torneo Binance 2022</span>
-                    </h2>
-                </div>
-                <div class="table-responsive">
-                    <table class="table table-light table-hover">
-                        <thead>
-                            <tr>
-                                <th colspan="2">Jugador</th>
-                                <th>Goles</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Adam Barreiro</td>
-                                <td><img src="../Imagenes/imagenes-equipos/casla.png" alt="San Lorenzo"></td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <td>Ramiro Enrique</td>
-                                <td><img src="../Imagenes/imagenes-equipos/cab.png" alt="Bandfield"></td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>Mateo Retegui</td>
-                                <td><img src="../Imagenes/imagenes-equipos/tigre.webp" alt="Tigre"></td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>Salomón Rodriguez</td>
-                                <td><img src="../Imagenes/imagenes-equipos/godoyCruz.png" alt="Godoy Crúz"></td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>Cristian Colmán</td>
-                                <td><img src="../Imagenes/imagenes-equipos/cia.png" alt="Barracas Central"></td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>Ramiro Sordo</td>
-                                <td><img src="../Imagenes/imagenes-equipos/newlls.png" alt="Newell´s"></td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>Franco Cristaldo</td>
-                                <td><img src="../Imagenes/imagenes-equipos/huracan.png" alt="Huracán"></td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>Leandro Benegas</td>
-                                <td><img src="../Imagenes/imagenes-equipos/cai.png" alt="Independiente"></td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Jualian Álvarez</td>
-                                <td><img src="../Imagenes/imagenes-equipos/riverPlate.webp" alt="River plate"></td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Neri Bandiera</td>
-                                <td><img src="../Imagenes/imagenes-equipos/cia.png" alt="Barracas central"></td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Enzo Copetti</td>
-                                <td><img src="../Imagenes/imagenes-equipos/racing.png" alt="Racing club"></td>
-                                <td>3</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-7">
-                    <div class="m-2 p-2">
-                        <h2 class="d-flex flex-column posiciones-titular fw">Tabla de promedios
-                            <span class="fst-italic text-success">Liga profesional de Fútbol</span>
-                        </h2>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-success table-striped-columns table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">POS</th>
-                                    <th></th>
-                                    <th scope="col">EQUIPO</th>
-                                    <th scope="col">PJ</th>
-                                    <th scope="col">PTS</th>
-                                    <th scope="col">PROMEDIO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/riverPlate.webp" alt="River Plate">
-                                    </td>
-                                    <td class="fw-bold">Godoy Crúz</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">160</td>
-                                    <td class="text-primary fw-bold">1.905</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/bocaJuniors.png" alt="Boca Juniors">
-                                    </td>
-                                    <td class="fw-bold">Boca Juniors</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">153</td>
-                                    <td class="text-primary fw-bold">1.821</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/racing.png" alt="Racing club">
-                                    </td>
-                                    <td class="fw-bold">Racing club</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">139</td>
-                                    <td class="text-primary fw-bold">1.655</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/aaaj.png" alt="Argentinos Juniors">
-                                    </td>
-                                    <td class="fw-bold">Argentinos</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">134</td>
-                                    <td class="text-primary fw-bold">1.595</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/velez.webp" alt="Velez Sarfield">
-                                    </td>
-                                    <td class="fw-bold">Vélez</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">133</td>
-                                    <td class="text-primary fw-bold">1.583</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/dyj.png" alt="Defensa y justicia">
-                                    </td>
-                                    <td class="fw-bold">Defensa</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">130</td>
-                                    <td class="text-primary fw-bold">1.548</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/edlp.png" alt="Estudiantes de la plata">
-                                    </td>
-                                    <td class="fw-bold">Estudiantes</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">127</td>
-                                    <td class="text-primary fw-bold">1.512</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/talleres.webp" alt="Talleres">
-                                    </td>
-                                    <td class="fw-bold">Talleres</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">119</td>
-                                    <td class="text-primary fw-bold">1.417</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/newlls.png" alt="Newell´s">
-                                    </td>
-                                    <td class="fw-bold">Newell´s</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">116</td>
-                                    <td class="text-primary fw-bold">1.381</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/gym.png"
-                                            alt="Gimnasia y esgrima la plata">
-                                    </td>
-                                    <td class="fw-bold">Gimnasia</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">114</td>
-                                    <td class="text-primary fw-bold">1.357</td>
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/cai.png" alt="Independiente">
-                                    </td>
-                                    <td class="fw-bold">Independiente</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">114</td>
-                                    <td class="text-primary fw-bold">1.357</td>
-                                </tr>
-                                <tr>
-                                    <td>12</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/casla.png" alt="San Lorenzo">
-                                    </td>
-                                    <td class="fw-bold">San Lorenzo</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">113</td>
-                                    <td class="text-primary fw-bold">1.345</td>
-                                </tr>
-                                <tr>
-                                    <td>13</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/lanus.png" alt="Lanús">
-                                    </td>
-                                    <td class="fw-bold">Lanús</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">112</td>
-                                    <td class="text-primary fw-bold">1.333</td>
-                                </tr>
-                                <tr>
-                                    <td>14</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/cau}.png" alt="union de Santa Fe">
-                                    </td>
-                                    <td class="fw-bold">Union</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">112</td>
-                                    <td class="text-primary fw-bold">1.333</td>
-                                </tr>
-                                <tr>
-                                    <td>15</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/tigre.webp" alt="Tigre">
-                                    </td>
-                                    <td class="fw-bold">Tigre</td>
-                                    <td class="text-primary fw-bold">22</td>
-                                    <td class="text-primary fw-bold">29</td>
-                                    <td class="text-primary fw-bold">1.318</td>
-                                </tr>
-                                <tr>
-                                    <td>16</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/colon.png" alt="Colón de Santa Fe">
-                                    </td>
-                                    <td class="fw-bold">Colón</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">110</td>
-                                    <td class="text-primary fw-bold">1.310</td>
-                                </tr>
-                                <tr>
-                                    <td>17</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/central.png" alt="Rosario Central">
-                                    </td>
-                                    <td class="fw-bold">Central</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">108</td>
-                                    <td class="text-primary fw-bold">1.286</td>
-                                </tr>
-                                <tr>
-                                    <td>18</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/cia.png" alt="Barracas central">
-                                    </td>
-                                    <td class="fw-bold">B. Central</td>
-                                    <td class="text-primary fw-bold">22</td>
-                                    <td class="text-primary fw-bold">28</td>
-                                    <td class="text-primary fw-bold">1.273</td>
-                                </tr>
-                                <tr>
-                                    <td>19</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/huracan.png" alt="Huracán">
-                                    </td>
-                                    <td class="fw-bold">Huracán</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">106</td>
-                                    <td class="text-primary fw-bold">1.262</td>
-                                </tr>
-                                <tr>
-                                    <td>20</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/cab.png" alt="Bandfield">
-                                    </td>
-                                    <td class="fw-bold">Bandfield</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">105</td>
-                                    <td class="text-primary fw-bold">1.250</td>
-                                </tr>
-                                <tr>
-                                    <td>21</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/cat.png" alt="Atlético Tucumán">
-                                    </td>
-                                    <td class="fw-bold">Atl. Tucumán</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">99</td>
-                                    <td class="text-primary fw-bold">1.179</td>
-                                </tr>
-                                <tr>
-                                    <td>22</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/cap.png" alt="Platense">
-                                    </td>
-                                    <td class="fw-bold">Platense</td>
-                                    <td class="text-primary fw-bold">60</td>
-                                    <td class="text-primary fw-bold">69</td>
-                                    <td class="text-primary fw-bold">1.150</td>
-                                </tr>
-                                <tr>
-                                    <td>23</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/arsenal.png" alt="Arsenal de Sarandí">
-                                    </td>
-                                    <td class="fw-bold">Arsenal</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">96</td>
-                                    <td class="text-primary fw-bold">1.143</td>
-                                </tr>
-                                <tr>
-                                    <td>24</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/godoyCruz.png" alt="Godoy Cruz">
-                                    </td>
-                                    <td class="fw-bold">Godoy Cruz</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">96</td>
-                                    <td class="text-primary fw-bold">1.143</td>
-                                </tr>
-                                <tr>
-                                    <td>25</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/csa.webp" alt="Sarmiento">
-                                    </td>
-                                    <td class="fw-bold">Sarmiento</td>
-                                    <td class="text-primary fw-bold">60</td>
-                                    <td class="text-primary fw-bold">68</td>
-                                    <td class="text-primary fw-bold">1.133</td>
-                                </tr>
-                                <tr>
-                                    <td>26</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/cacc.png" alt="Central Córdoba">
-                                    </td>
-                                    <td class="fw-bold">C. Córdoba</td>
-                                    <td class="text-primary fw-bold">84</td>
-                                    <td class="text-primary fw-bold">92</td>
-                                    <td class="text-primary fw-bold">1.095</td>
-                                </tr>
-                                <tr>
-                                    <td>27</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/caa.png" alt="Aldosivi">
-                                    </td>
-                                    <td class="text-danger fw-bold">Aldosivi</td>
-                                    <td class="text-danger fw-bold">84</td>
-                                    <td class="text-danger fw-bold">90</td>
-                                    <td class="text-danger fw-bold">1.071</td>
-                                </tr>
-                                <tr>
-                                    <td>28</td>
-                                    <td class="d-flex justify-content-end ps-3"><img
-                                            src="../Imagenes/imagenes-equipos/patronato.png" alt="Patronato">
-                                    </td>
-                                    <td class="text-danger fw-bold">Patronato</td>
-                                    <td class="text-danger fw-bold">84</td>
-                                    <td class="text-danger fw-bold">81</td>
-                                    <td class="text-danger fw-bold">0.964</td>
-                                </tr>
-                            </tbody>
+            <div class="posiciones__seccion-tablaGolYpro">
+                <div class="row justify-content-around flex-row-reverse">
+                    <div class="col-xl-3 col-md-5">
+                        <div class="mt-2 p-2">
+                            <h2 class="d-flex flex-column posiciones-titular fw">Tabla de
+                                goleadores
+                                <span class="fst-italic text-success">Torneo Binance 2022</span>
+                            </h2>
+                        </div>
 
-                        </table>
+                        <div class="shadow p-3 mb-5 bg-body rounded table-responsive tabla ">
+                            <table class="table table-light table-hover">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Jugador</th>
+                                        <th>Goles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Adam Barreiro</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/casla.png" alt="San Lorenzo">
+                                        </td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ramiro Enrique</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/cab.png" alt="Bandfield"></td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mateo Retegui</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/tigre.webp" alt="Tigre"></td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Salomón Rodriguez</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/godoyCruz.png" alt="Godoy Crúz">
+                                        </td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cristian Colmán</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/cia.png" alt="Barracas Central">
+                                        </td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ramiro Sordo</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/newlls.png" alt="Newell´s"></td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Franco Cristaldo</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/huracan.png" alt="Huracán"></td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Leandro Benegas</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/cai.png" alt="Independiente">
+                                        </td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jualian Álvarez</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/riverPlate.webp" alt="River plate">
+                                        </td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Neri Bandiera</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/cia.png" alt="Barracas central">
+                                        </td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Enzo Copetti</td>
+                                        <td><img src="../Imagenes/imagenes-equipos/racing.png" alt="Racing club">
+                                        </td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-7 col-md-7">
+                        <div class="m-2 p-2">
+                            <h2 class="d-flex flex-column posiciones-titular fw">Tabla de promedios
+                                <span class="fst-italic text-success">Liga profesional de Fútbol</span>
+                            </h2>
+                        </div>
+
+                        <div class="table-responsive tabla-promedios ">
+                            <table class="table table-striped table-hover">
+                                <thead class="position-sticky top-0 shadow p-3 mb-5 bg-light rounded">
+                                    <tr>
+                                        <th scope="col">POS</th>
+                                        <th></th>
+                                        <th scope="col">EQUIPO</th>
+                                        <th scope="col">PJ</th>
+                                        <th scope="col">PTS</th>
+                                        <th scope="col">PROMEDIO</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/riverPlate.webp" alt="River Plate">
+                                        </td>
+                                        <td class="fw-bold">Godoy Crúz</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">160</td>
+                                        <td class="text-primary fw-bold">1.905</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/bocaJuniors.png" alt="Boca Juniors">
+                                        </td>
+                                        <td class="fw-bold">Boca Juniors</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">153</td>
+                                        <td class="text-primary fw-bold">1.821</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/racing.png" alt="Racing club">
+                                        </td>
+                                        <td class="fw-bold">Racing club</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">139</td>
+                                        <td class="text-primary fw-bold">1.655</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/aaaj.png" alt="Argentinos Juniors">
+                                        </td>
+                                        <td class="fw-bold">Argentinos</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">134</td>
+                                        <td class="text-primary fw-bold">1.595</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/velez.webp" alt="Velez Sarfield">
+                                        </td>
+                                        <td class="fw-bold">Vélez</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">133</td>
+                                        <td class="text-primary fw-bold">1.583</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/dyj.png" alt="Defensa y justicia">
+                                        </td>
+                                        <td class="fw-bold">Defensa</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">130</td>
+                                        <td class="text-primary fw-bold">1.548</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/edlp.png"
+                                                alt="Estudiantes de la plata">
+                                        </td>
+                                        <td class="fw-bold">Estudiantes</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">127</td>
+                                        <td class="text-primary fw-bold">1.512</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/talleres.webp" alt="Talleres">
+                                        </td>
+                                        <td class="fw-bold">Talleres</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">119</td>
+                                        <td class="text-primary fw-bold">1.417</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/newlls.png" alt="Newell´s">
+                                        </td>
+                                        <td class="fw-bold">Newell´s</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">116</td>
+                                        <td class="text-primary fw-bold">1.381</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/gym.png"
+                                                alt="Gimnasia y esgrima la plata">
+                                        </td>
+                                        <td class="fw-bold">Gimnasia</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">114</td>
+                                        <td class="text-primary fw-bold">1.357</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/cai.png" alt="Independiente">
+                                        </td>
+                                        <td class="fw-bold">Independiente</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">114</td>
+                                        <td class="text-primary fw-bold">1.357</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/casla.png" alt="San Lorenzo">
+                                        </td>
+                                        <td class="fw-bold">San Lorenzo</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">113</td>
+                                        <td class="text-primary fw-bold">1.345</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/lanus.png" alt="Lanús">
+                                        </td>
+                                        <td class="fw-bold">Lanús</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">112</td>
+                                        <td class="text-primary fw-bold">1.333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/cau}.png" alt="union de Santa Fe">
+                                        </td>
+                                        <td class="fw-bold">Union</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">112</td>
+                                        <td class="text-primary fw-bold">1.333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/tigre.webp" alt="Tigre">
+                                        </td>
+                                        <td class="fw-bold">Tigre</td>
+                                        <td class="text-primary fw-bold">22</td>
+                                        <td class="text-primary fw-bold">29</td>
+                                        <td class="text-primary fw-bold">1.318</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/colon.png" alt="Colón de Santa Fe">
+                                        </td>
+                                        <td class="fw-bold">Colón</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">110</td>
+                                        <td class="text-primary fw-bold">1.310</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/central.png" alt="Rosario Central">
+                                        </td>
+                                        <td class="fw-bold">Central</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">108</td>
+                                        <td class="text-primary fw-bold">1.286</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/cia.png" alt="Barracas central">
+                                        </td>
+                                        <td class="fw-bold">B. Central</td>
+                                        <td class="text-primary fw-bold">22</td>
+                                        <td class="text-primary fw-bold">28</td>
+                                        <td class="text-primary fw-bold">1.273</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/huracan.png" alt="Huracán">
+                                        </td>
+                                        <td class="fw-bold">Huracán</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">106</td>
+                                        <td class="text-primary fw-bold">1.262</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/cab.png" alt="Bandfield">
+                                        </td>
+                                        <td class="fw-bold">Bandfield</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">105</td>
+                                        <td class="text-primary fw-bold">1.250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/cat.png" alt="Atlético Tucumán">
+                                        </td>
+                                        <td class="fw-bold">Atl. Tucumán</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">99</td>
+                                        <td class="text-primary fw-bold">1.179</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/cap.png" alt="Platense">
+                                        </td>
+                                        <td class="fw-bold">Platense</td>
+                                        <td class="text-primary fw-bold">60</td>
+                                        <td class="text-primary fw-bold">69</td>
+                                        <td class="text-primary fw-bold">1.150</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/arsenal.png" alt="Arsenal de Sarandí">
+                                        </td>
+                                        <td class="fw-bold">Arsenal</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">96</td>
+                                        <td class="text-primary fw-bold">1.143</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/godoyCruz.png" alt="Godoy Cruz">
+                                        </td>
+                                        <td class="fw-bold">Godoy Cruz</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">96</td>
+                                        <td class="text-primary fw-bold">1.143</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/csa.webp" alt="Sarmiento">
+                                        </td>
+                                        <td class="fw-bold">Sarmiento</td>
+                                        <td class="text-primary fw-bold">60</td>
+                                        <td class="text-primary fw-bold">68</td>
+                                        <td class="text-primary fw-bold">1.133</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/cacc.png" alt="Central Córdoba">
+                                        </td>
+                                        <td class="fw-bold">C. Córdoba</td>
+                                        <td class="text-primary fw-bold">84</td>
+                                        <td class="text-primary fw-bold">92</td>
+                                        <td class="text-primary fw-bold">1.095</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/caa.png" alt="Aldosivi">
+                                        </td>
+                                        <td class="text-danger fw-bold">Aldosivi</td>
+                                        <td class="text-danger fw-bold">84</td>
+                                        <td class="text-danger fw-bold">90</td>
+                                        <td class="text-danger fw-bold">1.071</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td class="d-flex justify-content-end ps-3"><img
+                                                src="../Imagenes/imagenes-equipos/patronato.png" alt="Patronato">
+                                        </td>
+                                        <td class="text-danger fw-bold">Patronato</td>
+                                        <td class="text-danger fw-bold">84</td>
+                                        <td class="text-danger fw-bold">81</td>
+                                        <td class="text-danger fw-bold">0.964</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container ">
+            <div class="row justify-content-center text-center py-4">
+                <div class="row">
+                    <div class="col col-company">
+                        <h3 class="text-start mb-2 fw-bold">Información sobre la compañia</h3>
+                        <div class="bg-transparent text-start mx-auto ">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis ut repellendus magni
+                                eveniet
+                                voluptate consequatur molestias consectetur impedit ipsum? Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Possimus eveniet, tempore eum unde excepturi inventore
+                                sint eius dolor optio ullam?</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <h3 class="fw-bold mb-3">Redes sociales</h3>
+                        </div>
+                        <div class="col">
+                            <div class="card d-flex flex-row p-2 w-75 justify-content-start mx-auto">
+                                <div class="face face--fron ms-3 ps-3"><a href=""><i
+                                            class="bi bi-facebook me-2"></i></a></div>
+                                <div class="face face--back text-dark">Facebook</div>
+                            </div>
+                            <div class="card d-flex flex-row p-2 w-75 justify-content-start mx-auto">
+                                <div class="face face--fron ms-3 ps-3"><a href=""><i class="bi bi-twitter me-2"></i></a>
+                                </div>
+                                <div class="face face--back text-dark">Twitter</div>
+                            </div>
+                            <div class="card d-flex flex-row p-2 w-75 justify-content-start mx-auto">
+                                <div class="face face--fron ms-3 ps-3"><a href=""><i
+                                            class="bi bi-linkedin me-2"></i></a></div>
+                                <div class="face face--back text-dark">Linkedin</div>
+                            </div>
+                            <div class="card d-flex flex-row p-2 w-75 justify-content-start mx-auto">
+                                <div class="face face--fron ms-3 ps-3"><a href=""> <i
+                                            class="bi bi-instagram me-2"></i></a></div>
+                                <div class="face face--back text-dark">Instagram</div>
+                            </div>
+                            <div class="card d-flex flex-row p-2 w-75 justify-content-start mx-auto">
+                                <div class="face face--fron ms-3 ps-3"><a href=""> <i class="bi bi-github me-2"></i></a>
+                                </div>
+                                <div class="face face--back text-dark">GitHub</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3 class="text-start fw-bold mb-3">Información de contacto</h3>
+                        <div class="bg-transparent text-start mx-auto">
+                            <div class="d-flex">
+                                <i class="bi bi-house-door mx-2"></i>
+                                <address>Argentina, Buenos aires.</address>
+                            </div>
+                            <div class="d-flex">
+                                <i class="bi bi-envelope mx-2"></i>
+                                <p>Matias-chaza@hotmail.com</p>
+                            </div>
+                            <div class="d-flex">
+                                <i class="bi bi-whatsapp mx-2"></i>
+                                <p>11-6850-6479</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
