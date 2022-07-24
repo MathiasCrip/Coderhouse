@@ -24,11 +24,9 @@
   0% {
     background-position: 0 100%;
   }
-
   50% {
     background-position: 100% 0%;
   }
-
   100% {
     background-position: 0 100%;
   }
@@ -38,29 +36,23 @@
   0% {
     background-position: 0 100%;
   }
-
   50% {
     background-position: 100% 0%;
   }
-
   100% {
     background-position: 0 100%;
   }
 }
-
 #login__body {
   background-color: #d3d3d3;
 }
-
 #login__body section .login-box-btn .login--btn {
   background-color: #0055dd;
   box-shadow: #096639 4px 4px 0px;
 }
-
 #login__body section .login-box-btn .login--btn:hover {
   border: 1px solid #0055dd;
 }
-
 #login__body section .login-box-btn .login--btn:active {
   transform: translate(4px) translate(4px);
   box-shadow: #096639 0px 0px 0px;
@@ -71,23 +63,19 @@
   font-family: sans-serif;
   background: linear-gradient(#8f663a, #98b6c3);
 }
-
 #registro__body .registro__main {
   max-width: 1200px;
   margin: auto auto;
 }
-
 #registro__body .registro__main .registro-input-fnac,
 #registro__body .registro__main .registro-input-codPost {
   min-width: 160px;
   max-width: 170px;
 }
-
 #registro__body .registro__main .registro-input-nombre,
 #registro__body .registro__main .registro-input-apellido {
   max-width: 60vw;
 }
-
 #registro__body .registro__main .registro-input-tel,
 #registro__body .registro__main .registro-input-email,
 #registro__body .registro__main .registro-input-clave,
@@ -95,32 +83,25 @@
 #registro__body .registro__main .registro-input-loc {
   max-width: 66vw;
 }
-
 #registro__body .registro__main form .registro--btn-save,
 #registro__body .registro__main form .registro--btn-clear {
   background-color: #2a45af;
   box-shadow: #093c66 4px 4px 0px;
 }
-
 #registro__body .registro__main form .registro--btn-save:active,
 #registro__body .registro__main form .registro--btn-clear:active {
   transform: translate(4px) translate(4px);
   box-shadow: #093c66 0px 0px 0px;
 }
-
 #registro__body .registro__main form .registro--btn-save:hover {
   background-color: #00dd5f;
 }
-
 #registro__body .registro__main form .registro--btn-clear:hover {
   background-color: #bb5418;
 }
 
-.button,
-#contacto__container input[name=btn-submit],
-#contacto__container input[name=btn-reset],
-#login__body section .login-box-btn .login--btn,
-#registro__body .registro__main form .registro--btn-save,
+.button, #contacto__container input[name=btn-submit],
+#contacto__container input[name=btn-reset], #login__body section .login-box-btn .login--btn, #registro__body .registro__main form .registro--btn-save,
 #registro__body .registro__main form .registro--btn-clear {
   width: 12.5rem;
   border: 1px solid #204521;
@@ -139,27 +120,22 @@
 #contacto__container {
   background: linear-gradient(#dfdfde, #98b6c3);
 }
-
 #contacto__container input[name=btn-submit],
 #contacto__container input[name=btn-reset] {
   background-color: #1197cc;
   box-shadow: #094c66 4px 4px 0px;
 }
-
 #contacto__container input[name=btn-submit]:active,
 #contacto__container input[name=btn-reset]:active {
   transform: translate(4px) translate(4px);
   box-shadow: #094c66 0px 0px 0px;
 }
-
 #contacto__container input[name=btn-submit]:hover {
   background-color: #3fa134;
 }
-
 #contacto__container input[name=btn-reset]:hover {
   background-color: #111ac7;
 }
-
 #contacto__container .form-box {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -179,11 +155,9 @@ a {
   height: 70px;
   z-index: 2;
 }
-
 .navbar .navbar-style {
   border: none;
 }
-
 .navbar .box-btn {
   top: 4px;
   height: 50px;
@@ -191,7 +165,6 @@ a {
   background-color: #198754;
   border: hidden;
 }
-
 .navbar .box-btn .btn-nav::after {
   position: absolute;
   content: " ";
@@ -202,7 +175,6 @@ a {
   background-color: #00dd5f;
   transition: all 0.5s;
 }
-
 .navbar .box-btn .btn-nav::before {
   position: absolute;
   content: " ";
@@ -213,23 +185,20 @@ a {
   background-color: #00dd5f;
   transition: all 0.5s;
 }
-
 .navbar .box-btn input {
   width: 50px;
   height: 50px;
   cursor: pointer;
   z-index: 9;
 }
-
-.navbar .box-btn input:checked~.btn-nav::after {
+.navbar .box-btn input:checked ~ .btn-nav::after {
   transform: rotate(45deg);
   transform-origin: 11px 5px;
   -webkit-animation: effecto 0.5s linear;
-  animation: effecto 0.5s linear;
+          animation: effecto 0.5s linear;
   background-color: #02f3b7;
 }
-
-.navbar .box-btn input:checked~.btn-nav::before {
+.navbar .box-btn input:checked ~ .btn-nav::before {
   transform: rotate(-45deg);
   transform-origin: 13px 0;
   animation: effecto 0.5s linear alternate-reverse;
@@ -239,28 +208,31 @@ a {
 .contenedor-fixture .partido-grupo {
   overflow-x: auto;
 }
-
 .contenedor-fixture .partido-name {
   font-weight: 600;
   font-size: 0.9rem;
 }
-
 .contenedor-fixture .partido-goles {
   font-weight: 900;
   color: #00a5f4;
   font-size: 1.5rem;
 }
-
 .contenedor-fixture .date {
   color: #ff4c22;
   font-weight: 700;
   font-size: 0.8rem;
 }
-
 .contenedor-fixture .partido-legend {
   font-size: 0.9rem;
 }
-
+@media (max-width: 992px) {
+  .contenedor-fixture .index-header {
+    position: relative;
+    max-width: 750px;
+    margin: auto auto;
+    min-height: 240px;
+  }
+}
 @media (max-width: 576px) {
   .contenedor-fixture .partido {
     display: grid;
@@ -268,40 +240,34 @@ a {
     grid-template-rows: 25px;
     margin-bottom: 15px;
   }
-
   .contenedor-fixture .container .partido-grupo .partido .partido-vs .partido-score {
     display: flex;
     flex-direction: column-reverse;
     align-self: center;
   }
-
   .contenedor-fixture .partido-legend {
     margin-left: 85px;
   }
 }
 
 .index-img {
-  max-height: 75vh;
-  min-height: 40vh;
+  height: 300px;
 }
 
 .index__bg {
   background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
   -webkit-animation: fondo-animado 10s ease infinite;
-  animation: fondo-animado 10s ease infinite;
+          animation: fondo-animado 10s ease infinite;
   background-size: 800%;
 }
-
 .index__bg .box-section {
   background: transparent;
 }
-
 .index__bg .box-section .img__equipo {
   transition: 0.5s;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-
 .index__bg .box-section .img__equipo:hover {
   transform: scale(1.2);
 }
@@ -310,11 +276,9 @@ footer {
   background-color: #202020;
   color: #f5f3ee;
 }
-
 footer .card:hover {
   transform: translateX(4px);
 }
-
 footer .card {
   background: linear-gradient(90deg, rgb(199, 199, 209) 0%, rgb(235, 244, 176) 0%, rgb(120, 116, 2) 100%, rgb(0, 255, 46) 100%, rgb(124, 115, 7) 100%);
   cursor: pointer;
@@ -322,13 +286,10 @@ footer .card {
   min-width: 170px;
   max-width: 180px;
 }
-
 footer .col-company {
   min-width: 300px;
 }
 
 .registro-footer {
   height: 13.8rem;
-}
-
-/*# sourceMappingURL=Style_ed.css.map */
+}/*# sourceMappingURL=Style_ed.css.map */

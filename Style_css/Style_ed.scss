@@ -64,6 +64,7 @@ $value in $bg-color {
 
 }
 
+
 #login__body {
     background-color: #d3d3d3;
 
@@ -266,6 +267,7 @@ a {
 .contenedor-fixture {
     .partido-grupo {
         overflow-x: auto;
+
     }
 
     .partido-name {
@@ -289,6 +291,17 @@ a {
         font-size: 0.9rem;
     }
 
+    @media (max-width: 992px) {
+
+        .index-header {
+            position: relative;
+            max-width: 750px;
+            margin: auto auto;
+            min-height: 240px;
+        }
+    }
+
+
     @media (max-width:576px) {
 
         .partido {
@@ -298,6 +311,8 @@ a {
             margin-bottom: 15px;
 
         }
+
+
 
         .container .partido-grupo .partido .partido-vs .partido-score {
             display: flex;
@@ -314,9 +329,10 @@ a {
 
 }
 
+
 .index-img {
-    max-height: 75vh;
-    min-height: 40vh;
+
+    height: 300px;
 }
 
 .index__bg {
@@ -328,7 +344,6 @@ a {
         background: transparent;
 
         .img__equipo {
-
             transition: 0.5s;
             object-fit: cover;
         }
