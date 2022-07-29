@@ -70,9 +70,14 @@ $value in $bg-color {
         -webkit-transform: translateY(20px);
     }
 
-    100% {
+    75% {
         opacity: 0;
         -webkit-transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 
 }
@@ -226,8 +231,36 @@ a {
     height: 70px;
     z-index: 2;
 
+
+    .navbar-collapse {
+
+        .listado-equipos {
+            transition: all .5s;
+        }
+
+        .listado-equipos-items {
+            height: 200px;
+            overflow-y: scroll;
+            width: 17rem;
+            background-color: transparent;
+            margin-left: 6rem;
+
+            a {
+
+                transition: all .2s;
+
+                img {
+                    width: 24px;
+                    margin-left: .7rem;
+
+                }
+            }
+        }
+    }
+
     .navbar-style {
         border: none;
+
     }
 
     .box-btn {
@@ -363,6 +396,8 @@ a {
     // animation: fondo-animado 10s ease infinite;
     // background-size: 800%;
 
+
+    //Sobreescribo las vaiables de Bootstrap
     .btn-outline-success {
         --bs-btn-border-width: none;
         --bs-btn-border-color: transparent;
@@ -388,7 +423,7 @@ a {
             transition: all .2s;
         }
 
-    
+
 
         .img__equipo {
             transition: 0.5s;

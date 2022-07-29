@@ -41,9 +41,16 @@
 
         }
 
-        @media (min-width:992px) {
-            .equipos {
-                visibility: hidden;
+        @media (min-width:576px) {
+            .listado-equipos {
+                content-visibility: hidden;
+            }
+        }
+
+        @media (max-width:576px) {
+
+            .index-listado-equipos {
+                content-visibility: hidden;
             }
         }
 
@@ -436,8 +443,7 @@
     <nav class="bg-color-amarillo bg-gradient navbar navbar-expand-lg position-sticky top-0">
         <div class="container-fluid bg-color-amarillo bg-gradient ">
             <div>
-                <a class="navbar-brand" href="#"><img src="./Imagenes/imagenes_index/header__logo.png"
-                        style="width: 45px;" alt=""></a>
+                <a class="navbar-brand" href="#"><img src="./Imagenes/Dragon-logo.png" style="width: 55px;" alt=""></a>
             </div>
             <button class="navbar-toggler navbar-style me-3" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -451,21 +457,81 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ms-5">
-                    <!-- <li class="nav-item equipos">
-                        <a href="./Documentos-html/Equipo.html" class="nav-link">Equipos</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a href="./Documentos-html/Registro.html" class="nav-link">Registrarme</a>
+
+                    <li class="nav-item dropdown listado-equipos">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Equipos
+                        </a>
+                        <ul class="dropdown-menu listado-equipos-items">
+                            <li><a class="dropdown-item" href="#">Boca Juniors <img
+                                        src="./Imagenes/imagenes-equipos/bocaJuniors.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">River Plate <img
+                                        src="./Imagenes/imagenes-equipos/riverPlate.webp" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Arsenal<img
+                                        src="./Imagenes/imagenes-equipos/arsenal.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Argentino Juniors<img
+                                        src="./Imagenes/imagenes-equipos/aaaj.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Atléltico Tucumán<img
+                                        src="./Imagenes/imagenes-equipos/cat.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Aldosivi<img src="./Imagenes/imagenes-equipos/caa.png"
+                                        alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Barracas central<img
+                                        src="./Imagenes/imagenes-equipos/cia.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Talleres Cba.<img
+                                        src="./Imagenes/imagenes-equipos/talleres.webp" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Colón<img src="./Imagenes/imagenes-equipos/colon.png"
+                                        alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Defensa y J.<img
+                                        src="./Imagenes/imagenes-equipos/dyj.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Estudiantes<img
+                                        src="./Imagenes/imagenes-equipos/edlp.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Gimnasia la Plata<img
+                                        src="./Imagenes/imagenes-equipos/gym.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Godoy Cruz<img
+                                        src="./Imagenes/imagenes-equipos/godoyCruz.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Huracán<img
+                                        src="./Imagenes/imagenes-equipos/huracan.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Independiente<img
+                                        src="./Imagenes/imagenes-equipos/cai.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Lanús<img src="./Imagenes/imagenes-equipos/lanus.png"
+                                        alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Newell´s<img
+                                        src="./Imagenes/imagenes-equipos/newlls.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Patronato<img
+                                        src="./Imagenes/imagenes-equipos/patronato.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Platense<img src="./Imagenes/imagenes-equipos/cap.png"
+                                        alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Racing Club<img
+                                        src="./Imagenes/imagenes-equipos/racing.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Rosario Centra<img
+                                        src="./Imagenes/imagenes-equipos/central.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">San Lorenzo<img
+                                        src="./Imagenes/imagenes-equipos/casla.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Sarmiento<img
+                                        src="./Imagenes/imagenes-equipos/csa.webp" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Tigre<img src="./Imagenes/imagenes-equipos/tigre.webp"
+                                        alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Union de Santa fe<img
+                                        src="./Imagenes/imagenes-equipos/cau}.png" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Vélez<img src="./Imagenes/imagenes-equipos/velez.webp"
+                                        alt=""></a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="./Documentos-html/Contacto.html" class="nav-link">Contacto</a>
+                        <a href="./Documentos-html/Registro.html" class="nav-link fs-5">Registrarme</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./Documentos-html/Acceder.html" class="nav-link">Login</a>
+                        <a href="./Documentos-html/Contacto.html" class="nav-link fs-5">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./Documentos-html/Equipo.html" class="nav-link">Nosotros</a>
+                        <a href="./Documentos-html/Acceder.html" class="nav-link fs-5">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="./Documentos-html/Equipo.html" class="nav-link fs-5">Nosotros</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -502,7 +568,7 @@
         </div>
     </header>
 
-    <div class="index-listado-equipos text-center my-5 ">
+    <div class="index-listado-equipos text-center my-5">
         <div>
             <ul class="container d-flex flex-wrap justify-content-center">
                 <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/aaaj.png"
@@ -561,11 +627,12 @@
                 </li>
             </ul>
         </div>
-        <h2 class="fw-bolder text-primary pt-5 fs-1 ">Bienvenido</h2>
-        <p class="fs-4 fst-italic text-success mb-0">La mejor y mas completa información sobre el deporte con más pasion
-            del mundo.
-        </p>
+
     </div>
+    <h2 class="fw-bolder text-primary pt-2 fs-1 text-center mb-3 ">Bienvenido</h2>
+    <p class="fs-4 fst-italic text-success text-center">La mejor y mas completa información sobre el deporte con más pasion
+        del mundo.
+    </p>
 
     <section class="index__bg bg-light pb-5 border-bottom">
         <div class="container px-5 my-5">
