@@ -43,6 +43,26 @@
     background-position: 0 100%;
   }
 }
+@-webkit-keyframes cartel-centro {
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+  }
+}
+@keyframes cartel-centro {
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+  }
+}
 #login__body {
   background-color: #d3d3d3;
 }
@@ -254,21 +274,42 @@ a {
   height: 405px;
 }
 
-.index__bg {
-  background: linear-gradient(45deg, #d3d3d3, #a49a5e, #dadada, #a56ca2);
-  -webkit-animation: fondo-animado 10s ease infinite;
-          animation: fondo-animado 10s ease infinite;
-  background-size: 800%;
+.index-listado-equipos ul {
+  list-style: none;
 }
-.index__bg .box-section {
+.index-listado-equipos ul img {
+  width: 45px;
+}
+
+.index__bg .btn-outline-success {
+  --bs-btn-border-width: none;
+  --bs-btn-border-color: transparent;
+  --bs-btn-focus-shadow-rgb: none;
+  --bs-btn-active-color: #3ab23a;
+  --bs-btn-active-bg: none;
+  --bs-btn-active-border-color: none;
+  --bs-btn-active-shadow: none;
+  --bs-btn-hover-color: #077a07;
+  --bs-btn-hover-bg: none;
+}
+.index__bg .box-section:hover {
   background: transparent;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
 }
-.index__bg .box-section .img__equipo {
+.index__bg .box-section:hover .cartel {
+  -webkit-animation: 1s cartel-centro 1;
+          animation: 1s cartel-centro 1;
+}
+.index__bg .box-section:hover .cartel {
+  transition: all 0.2s;
+}
+.index__bg .box-section:hover .img__equipo {
   transition: 0.5s;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.index__bg .box-section .img__equipo:hover {
+.index__bg .box-section:hover .img__equipo:hover {
   transform: scale(1.2);
 }
 

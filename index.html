@@ -19,8 +19,41 @@
     <link href="./Style_css/Style_ed.css" rel="stylesheet" />
 
 
-    <style>
 
+    <style>
+        @-webkit-keyframes vaiven {
+            20% {
+                transform: rotate(15deg);
+            }
+
+            40% {
+                transform: rotate(-10deg);
+            }
+
+            60% {
+                transform: rotate(5deg);
+            }
+
+            80% {
+                transform: rotate(-3deg);
+            }
+
+
+        }
+
+        @media (min-width:992px) {
+            .equipos {
+                visibility: hidden;
+            }
+        }
+
+        .index-listado-equipos img {
+            transition: all .2s;
+        }
+
+        .index-listado-equipos img:hover {
+            animation: vaiven 1s 1;
+        }
     </style>
 </head>
 
@@ -418,6 +451,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ms-5">
+                    <!-- <li class="nav-item equipos">
+                        <a href="./Documentos-html/Equipo.html" class="nav-link">Equipos</a>
+                    </li> -->
                     <li class="nav-item">
                         <a href="./Documentos-html/Registro.html" class="nav-link">Registrarme</a>
                     </li>
@@ -439,14 +475,7 @@
     <!-- Header-->
     <header class="py-1 index-header shadow-lg p-2 mb-5 bg-body rounded">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators ">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
+
             <div class="carousel-inner index-carousel">
                 <div class="carousel-item active">
                     <img src="./Imagenes/imagenes_index/img_carousel1.webp" class="d-block index-img w-100" alt="...">
@@ -462,22 +491,83 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </header>
 
-    <div class="text-center mb-5">
-        <h2 class="fw-bolder">Bienvenido</h2>
-        <p class="lead mb-0">Lorem ipsum dolor sit amet.</p>
+    <div class="index-listado-equipos text-center my-5 ">
+        <div>
+            <ul class="container d-flex flex-wrap justify-content-center">
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/aaaj.png"
+                            alt="Argentinos Juniors"></a> </li>
+                <li><a href="#"><img class="p-1 " src="./Imagenes/imagenes-equipos/cab.png" alt="Bandfield"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/arsenal.png" alt="Arsenal"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/cat.png" alt="Atletico Tucumán"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/caa.png" alt="Aldosivi"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/cia.png" alt="Barracas Central"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/bocaJuniors.png"
+                            alt="Boca Juniors"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/cacc.png" alt="Central Cordoba"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/colon.png"
+                            alt="Colón de Santa fe"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/dyj.png" alt="Defensa y Justicia"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/edlp.png"
+                            alt="Estudiantes de la Plata"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/gym.png"
+                            alt="Gimnasia y esgrima La Plata"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/godoyCruz.png" alt="Godoy Cruz"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/huracan.png" alt="Huracán"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/cai.png" alt="Independiente"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/lanus.png" alt="Lanús"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/newlls.png" alt="newell´s" s></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/patronato.png" alt="Patronato"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/cap.png" alt="Platense"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/racing.png" alt="Racing Club"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/riverPlate.webp"
+                            alt="River Plate"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/central.png"
+                            alt="Rosario Central"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/casla.png"
+                            alt="San lorenzo de Almagro"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/csa.webp" alt="Sarmiento"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/talleres.webp"
+                            alt="Talleres de Cordoba"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/tigre.webp" alt="Tigre"></a> </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/cau}.png" alt="Union de Santa fe"></a>
+                </li>
+                <li><a href="#"><img class="p-1" src="./Imagenes/imagenes-equipos/velez.webp" alt="Vélez Sarsfield"></a>
+                </li>
+            </ul>
+        </div>
+        <h2 class="fw-bolder text-primary pt-5 fs-1 ">Bienvenido</h2>
+        <p class="fs-4 fst-italic text-success mb-0">La mejor y mas completa información sobre el deporte con más pasion
+            del mundo.
+        </p>
     </div>
-    <section class="index__bg bg-light py-5 border-bottom">
+
+    <section class="index__bg bg-light pb-5 border-bottom">
         <div class="container px-5 my-5">
             <div class="row">
                 <div class="col-lg-12 col-md-8 mx-auto">
@@ -486,13 +576,13 @@
                             <div class="card mb-5 box-section shadow">
                                 <div class="card-body p-1">
                                     <div class="col p-3 bg-body rounded item rounded-4" style="--bs-bg-opacity: 0;">
-                                        <a href="#" class="text-decoration-none "><img
+                                        <a href="./Documentos-html/Posiciones.html" class="text-decoration-none "><img
                                                 class="img__equipo mx-auto d-block w-50"
                                                 src="./Imagenes/imagenes_index/pelota1.png" alt="Apostar a equipo"
-                                                title="equipo">
+                                                title="Posiciones">
                                         </a>
                                     </div>
-                                    <div class="d-grid"><a class="btn btn-outline-success fw-bolder"
+                                    <div class="d-grid cartel"><a class="btn btn-outline-success fw-bolder fs-5"
                                             href="./Documentos-html/Posiciones.html">Posiciones</a>
                                     </div>
                                 </div>
@@ -505,10 +595,10 @@
                                         <a href="#" class="text-decoration-none "><img
                                                 class="img__equipo mx-auto d-block w-50"
                                                 src="./Imagenes/imagenes_index/pelota1.png" alt="Apostar a equipo"
-                                                title="equipo">
+                                                title="Fixture">
                                         </a>
                                     </div>
-                                    <div class="d-grid"><a class="btn btn-outline-success fw-bolder"
+                                    <div class="d-grid cartel"><a class="btn btn-outline-success fw-bolder fs-5"
                                             href="#!">Fixture</a></div>
 
                                 </div>
@@ -521,11 +611,11 @@
                                         <a href="#" class="text-decoration-none "><img
                                                 class="img__equipo mx-auto d-block w-50"
                                                 src="./Imagenes/imagenes_index/pelota1.png" alt="Apostar a equipo"
-                                                title="equipo">
+                                                title="Plantilla">
                                         </a>
                                     </div>
-                                    <div class="d-grid"><a class="btn btn-outline-success fw-bolder"
-                                            href="#!">Videos</a></div>
+                                    <div class="d-grid cartel"><a class="btn btn-outline-success fw-bolder fs-5"
+                                            href="#!">Planteles</a></div>
 
                                 </div>
                             </div>
@@ -537,11 +627,11 @@
                                         <a href="#" class="text-decoration-none "><img
                                                 class="img__equipo mx-auto d-block w-50"
                                                 src="./Imagenes/imagenes_index/pelota1.png" alt="Apostar a equipo"
-                                                title="equipo">
+                                                title="Imagenes">
                                         </a>
                                     </div>
-                                    <div class="d-grid"><a class="btn btn-outline-success fw-bolder"
-                                            href="#!">imagenes</a>
+                                    <div class="d-grid cartel"><a class="btn btn-outline-success fw-bolder fs-5"
+                                            href="#!">Imagenes</a>
                                     </div>
 
                                 </div>
@@ -554,11 +644,11 @@
                                         <a href="#" class="text-decoration-none "><img
                                                 class="img__equipo mx-auto d-block w-50"
                                                 src="./Imagenes/imagenes_index/pelota1.png" alt="Apostar a equipo"
-                                                title="equipo">
+                                                title="Torneos">
                                         </a>
                                     </div>
-                                    <div class="d-grid"><a class="btn btn-outline-success fw-bolder"
-                                            href="#!">Información</a>
+                                    <div class="d-grid cartel"><a class="btn btn-outline-success fw-bolder fs-5"
+                                            href="#!">Torneos</a>
                                     </div>
 
                                 </div>
@@ -569,6 +659,10 @@
 
             </div>
         </div>
+
+        <div>
+
+
     </section>
 
     <footer>

@@ -64,6 +64,19 @@ $value in $bg-color {
 
 }
 
+@keyframes cartel-centro {
+    20% {
+        opacity: 1;
+        -webkit-transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-100px);
+    }
+
+}
+
 
 #login__body {
     background-color: #d3d3d3;
@@ -329,22 +342,53 @@ a {
 
 }
 
-
-
 .index-img {
 
     height: 405px;
 }
 
+.index-listado-equipos {
+    ul {
+        list-style: none;
+
+        img {
+            width: 45px;
+        }
+    }
+}
 
 
 .index__bg {
-    background: linear-gradient(45deg, $coloresClaros);
-    animation: fondo-animado 10s ease infinite;
-    background-size: 800%;
+    // background: linear-gradient(45deg, $coloresClaros);
+    // animation: fondo-animado 10s ease infinite;
+    // background-size: 800%;
 
-    .box-section {
+    .btn-outline-success {
+        --bs-btn-border-width: none;
+        --bs-btn-border-color: transparent;
+        --bs-btn-focus-shadow-rgb: none;
+        --bs-btn-active-color: #3ab23a;
+        --bs-btn-active-bg: none;
+        --bs-btn-active-border-color: none;
+        --bs-btn-active-shadow: none;
+        --bs-btn-hover-color: #077a07;
+        --bs-btn-hover-bg: none;
+    }
+
+    .box-section:hover {
         background: transparent;
+        border-radius: 50%;
+        transition: all .3s ease-out;
+
+        .cartel {
+            animation: 1s cartel-centro 1;
+        }
+
+        .cartel {
+            transition: all .2s;
+        }
+
+    
 
         .img__equipo {
             transition: 0.5s;
@@ -357,6 +401,7 @@ a {
 
     }
 }
+
 
 footer {
     background-color: #202020;
