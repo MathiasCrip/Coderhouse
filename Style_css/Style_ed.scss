@@ -64,6 +64,26 @@ $value in $bg-color {
 
 }
 
+@keyframes vaiven {
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-3deg);
+    }
+
+
+}
+
 @keyframes cartel-centro {
     20% {
         opacity: 1;
@@ -80,6 +100,19 @@ $value in $bg-color {
         transform: translateY(0px);
     }
 
+}
+
+@media (min-width:576px) {
+    .listado-equipos {
+        content-visibility: hidden;
+    }
+}
+
+@media (max-width:576px) {
+
+    .index-listado-equipos {
+        content-visibility: hidden;
+    }
 }
 
 
@@ -392,21 +425,39 @@ a {
 
 }
 
-.index-img {
+@media (min-width:664px) {
 
-    height: 405px;
+    .index-img {
+        height: 405px;
+    }
 }
 
+@media (max-width:664px) {
+
+    .index-img {
+        height: 200px;
+    }
+}
+
+
+
 .index-listado-equipos {
+
     ul {
         list-style: none;
 
         img {
             width: 45px;
+            transition: all .2s;
+
         }
     }
+
 }
 
+.index-listado-equipos img:hover {
+    animation: vaiven 1s;
+}
 
 .index__bg {
     // background: linear-gradient(45deg, $coloresClaros);

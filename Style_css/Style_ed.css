@@ -43,6 +43,34 @@
     background-position: 0 100%;
   }
 }
+@-webkit-keyframes vaiven {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+}
+@keyframes vaiven {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+}
 @-webkit-keyframes cartel-centro {
   20% {
     opacity: 1;
@@ -69,6 +97,16 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@media (min-width: 576px) {
+  .listado-equipos {
+    content-visibility: hidden;
+  }
+}
+@media (max-width: 576px) {
+  .index-listado-equipos {
+    content-visibility: hidden;
   }
 }
 #login__body {
@@ -307,15 +345,27 @@ a {
   }
 }
 
-.index-img {
-  height: 405px;
+@media (min-width: 664px) {
+  .index-img {
+    height: 405px;
+  }
 }
-
+@media (max-width: 664px) {
+  .index-img {
+    height: 200px;
+  }
+}
 .index-listado-equipos ul {
   list-style: none;
 }
 .index-listado-equipos ul img {
   width: 45px;
+  transition: all 0.2s;
+}
+
+.index-listado-equipos img:hover {
+  -webkit-animation: vaiven 1s;
+          animation: vaiven 1s;
 }
 
 .index__bg .btn-outline-success {
