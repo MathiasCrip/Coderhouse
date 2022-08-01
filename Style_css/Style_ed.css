@@ -89,9 +89,14 @@
 
 #registro__body {
   font-family: sans-serif;
-  background: linear-gradient(#8f663a, #98b6c3);
+  background-image: url(../Imagenes/imagenes_index/fondo-registro.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #registro__body .registro__main {
+  -webkit-backdrop-filter: invert(10%);
+          backdrop-filter: invert(10%);
   max-width: 1200px;
   margin: auto auto;
 }
@@ -192,6 +197,7 @@ a {
   width: 17rem;
   background-color: transparent;
   margin-left: 6rem;
+  border: transparent;
 }
 .navbar .navbar-collapse .listado-equipos-items a {
   transition: all 0.2s;
@@ -250,6 +256,12 @@ a {
   background-color: #02f3b7;
 }
 
+@media (max-width: 576px) {
+  .registro__img img {
+    transition: all 0.5s;
+    transform: translate(-93px, -203px) rotateY(180deg);
+  }
+}
 .contenedor-fixture .partido-grupo {
   overflow-x: auto;
 }

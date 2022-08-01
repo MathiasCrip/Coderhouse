@@ -112,10 +112,15 @@ $value in $bg-color {
 #registro__body {
 
     font-family: $font;
-    background: linear-gradient(#8f663a, #98b6c3);
+    background-image: url(../Imagenes/imagenes_index/fondo-registro.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 
     .registro__main {
 
+        backdrop-filter: invert(10%);
         max-width: 1200px;
         margin: auto auto;
 
@@ -244,6 +249,7 @@ a {
             width: 17rem;
             background-color: transparent;
             margin-left: 6rem;
+            border: transparent;
 
             a {
 
@@ -310,6 +316,18 @@ a {
     }
 }
 
+@media (max-width:576px) {
+    .registro__img {
+        img {
+            transition: all .5s;
+            transform: translate(-93px, -203px) rotateY(180deg);
+
+        }
+    }
+
+
+}
+
 .contenedor-fixture {
     .partido-grupo {
         overflow-x: auto;
@@ -346,7 +364,6 @@ a {
             min-height: 240px;
         }
     }
-
 
     @media (max-width:576px) {
 
