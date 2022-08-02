@@ -145,11 +145,8 @@ $value in $bg-color {
 #registro__body {
 
     font-family: $font;
-    background-image: url(../Imagenes/imagenes_index/fondo-registro.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
+    background: radial-gradient(#c3b9b9, #756464 70%);
 
     .registro__main {
 
